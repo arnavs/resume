@@ -1,0 +1,91 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Medium Length Professional CV
+% LaTeX Template
+% Version 2.0 (8/5/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Rishi Shah 
+%
+% Important note:
+% This template requires the resume.cls file to be in the same directory as the
+% .tex file. The resume.cls file provides the resume style used for structuring the
+% document.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass{resume} % Use the custom resume.cls style
+
+\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
+\usepackage{hyperref}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage{enumitem}
+
+\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
+\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
+\name{Arnav Sood} % Your name
+\address{2001-1600M Beach Ave, Vancouver V6G 1Y7 Canada} % Your address
+\begin{document}
+
+\faIcon{git-square} \href{https://github.com/arnavs}{\tt arnavs} \vline \hspace{0.5 em} {\faIcon{globe}} \href{http://arnavsood.com}{\tt http://arnavsood.com} \vline \hspace{0.5 em} \faIcon{phone} (+1) 604.339.1784 \vline \hspace{0.5 em} \faIcon{passport} USA \vline \hspace{0.5 em} \faIcon{birthday-cake} 1996
+
+\begin{rSection}{Employment History}
+Predoctoral Fellow, {\bf University of British Columbia} \hfill {Jun. 2018 --- Present} 
+\\ Advisor: Prof. Jesse Perla \smallskip 
+
+Lead Developer, {\bf QuantEcon} \hfill {Jan. 2019 --- Present}
+\\ References: Prof. John Stachurski, Dr. Matt McKay, Dr. Chase Coleman
+
+Research Assistant, {\bf Prof. Laura Veldkamp} \hfill {May. 2016 --- Jan. 2018}
+\\ References: Prof. Laura Veldkamp (now at Columbia)
+\end{rSection}
+
+
+\begin{rSection}{Education}
+
+{\bf University of British Columbia} \hfill {Jun. 2018 --- Present} 
+\\ Selected Courses (MS and BA.)  \hfill { A/A+ Grades }
+\\ References: Prof. Vitor Farinha Luz
+
+{\bf New York University} \hfill {Sep. 2014 - May 2018} 
+\\ Bachelor of Arts (Math.) \hfill { GPA: 3.2 } 
+\\ Minors in Economics, Philosophy 
+\\ Relevant Courses: 
+\begin{itemize}[noitemsep, nolistsep]
+    \item Information Economics (PhD., A) 
+    \item Topology I (MS, A)
+    \item Macroeconomic Foundations of Asset Pricing (Stern UG, B+)
+\end{itemize}
+
+\end{rSection}
+
+\begin{rSection}{Projects}
+
+{\bf Expectations.jl} \hfill {{\faIcon{git-square} \href{https://github.com/QuantEcon/Expectations.jl}{\tt QuantEcon/Expectations.jl}}} \smallskip
+\\ Wrap \texttt{Distributions.jl} objects in lightweight, callable expectation operators that accept functional arguments (e.g., \verb|E(x -> x^2|.) Uses specialized Gaussian quadrature rules for performance and accuracy. 
+
+{\bf PerlaTonettiWaugh.jl} \hfill {\faIcon{git-square} \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{\tt jlperla/PerlaTonettiWaugh.jl}} \smallskip
+\\ Solves a differential system in steady state; implementing the model as a Differential Algebraic Equation (DAE); and writing code to handle transition dynamics in response to shocks. Joint with Chiyoung Ahn. 
+
+{\bf QuantEcon Julia Lectures} \hfill {\faIcon{globe} \href{https://julia.quantecon.org}{\tt julia.quantecon.org}} \smallskip
+\\ Writing new lectures, updating all code to Julia 1.x, deploying cloud backends, and project management/code review. Joint work with many people.
+
+{\bf vse.syzygy.ca} \hfill {\faIcon{git-square} \href{https://github.com/ubcecon/vse-jupyterhub}{\tt ubcecon/vse-jupyterhub}} \smallskip
+\\ Work with Dr. Ian Allison of PIMS to maintain a JupyterHub server for departmental use. Deployed from Docker for a reproducible configuration. 
+
+{\bf Germs, Social Networks, and Growth} \hfill {\faIcon{git-square} \href{https://github.com/arnavs/networks-paper}{\tt arnavs/networks-paper}} \smallskip
+\\ Julia implementation of Prof. Veldkamp's paper of the same name. 
+\end{rSection}
+
+\begin{rSection}{Skills}
+Julia, Docker, Open-Source Development, Economic Programming, Differential Equations
+\end{rSection}
+
+\end{document}

@@ -31,24 +31,24 @@
 \newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
 \newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
 \name{Arnav Sood} % Your name
-\address{2001-1600M Beach Ave, Vancouver V6G 1Y7 Canada} % Your address
+\address{} % Your address
 \begin{document}
 
-\faIcon{git-square} \href{https://github.com/arnavs}{\tt arnavs} \vline \hspace{0.5 em} {\faIcon{globe}} \href{http://arnavsood.com}{\tt http://arnavsood.com} \vline \hspace{0.5 em} {\faIcon{envelope}} \href{mailto:resume@arnavsood.com}{\tt resume@arnavsood.com} \vline \hspace{0.5 em} \faIcon{phone} (+1) 604.339.1784 \vline \hspace{0.5 em} \faIcon{passport} USA 
+\faIcon{git-square} \href{https://github.com/arnavs}{\tt arnavs} \vline \hspace{0.5 em} {\faIcon{globe}} \href{https://arnavsood.com}{\tt arnavsood.com} \vline \hspace{0.5 em} {\faIcon{envelope}} \href{mailto:arnav@arnavsood.com}{\tt arnav@arnavsood.com} \vline \hspace{0.5 em} \faIcon{passport} USA 
 
 \begin{rSection}{Employment History}
-Predoctoral Researcher, {\bf University of British Columbia} \hfill {Jun. 2018 --- Present} 
+Predoctoral Researcher, {\bf University of British Columbia} \hfill {Jun. 2018 --- Jun. 2020} 
 \\ Advisor: Prof. Jesse Perla \smallskip 
 
 Lead Developer, {\bf QuantEcon} \hfill {Jan. 2019 --- Present}
 \\ References: Prof. John Stachurski, Dr. Matt McKay, Dr. Chase Coleman
 
 Research Assistant, {\bf Prof. Laura Veldkamp} \hfill {May. 2016 --- Jan. 2018}
+
 \end{rSection}
 
 \begin{rSection}{Education}
-
-{\bf University of British Columbia} \hfill {Jun. 2018 --- Present} 
+{\bf University of British Columbia} \hfill {Jun. 2018 --- Jun. 2020} 
 \\ Selected Courses (MS and BA.)  % \hfill { A/A+ Grades }
 
 {\bf New York University} \hfill {Sep. 2014 --- May 2018} 
@@ -56,26 +56,46 @@ Research Assistant, {\bf Prof. Laura Veldkamp} \hfill {May. 2016 --- Jan. 2018}
 \\ Minors in Economics, Philosophy 
 \end{rSection}
 
-\begin{rSection}{Projects}
+\begin{rSection}{Publications}
+    {\bf Exploiting Symmetry in High-Dimensional Dynamic Programming} \hfill {In-Progress} 
+    \\ (with Jesse Perla, Mahdi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde)    
 
-{\bf Expectations.jl} \hfill {{\faIcon{git-square} \href{https://github.com/QuantEcon/Expectations.jl}{\tt QuantEcon/Expectations.jl}}} \smallskip
-\\ Wrap \texttt{Distributions.jl} objects in lightweight, callable expectation operators that accept functional arguments (e.g., \verb|E(x -> x^2|.) Uses specialized Gaussian quadrature rules for performance and accuracy. 
-
-{\bf PerlaTonettiWaugh.jl} \hfill {\faIcon{git-square} \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{\tt jlperla/PerlaTonettiWaugh.jl}} \smallskip
-\\ Solves a differential system in steady state; implementing the model as a Differential Algebraic Equation (DAE); and writing code to handle transition dynamics in response to shocks. Joint with Chiyoung Ahn. 
-
-{\bf QuantEcon Julia Lectures} \hfill {\faIcon{globe} \href{https://julia.quantecon.org}{\tt julia.quantecon.org}} \smallskip
-\\ Writing new lectures, updating all code to Julia 1.x, deploying cloud backends, and project management/code review. Joint work with many people.
-
-{\bf vse.syzygy.ca} \hfill {\faIcon{git-square} \href{https://github.com/ubcecon/vse-jupyterhub}{\tt ubcecon/vse-jupyterhub}} \smallskip
-\\ Work with Dr. Ian Allison of PIMS to maintain a JupyterHub server for departmental use. Deployed from Docker for a reproducible configuration. 
-
-{\bf Germs, Social Networks, and Growth} \hfill {\faIcon{git-square} \href{https://github.com/arnavs/networks-paper}{\tt arnavs/networks-paper}} \smallskip
-\\ Julia implementation of Prof. Veldkamp's paper of the same name. 
+    We provide a new method for solving high-dimensional dynamic programming problems, and recursive competitive equilibria with a very large (but finite) number of heterogenous agents.  The ``curse of dimensionality'' is avoided due to three complementary techniques: (1) exploiting symmetry in the approximate law of motion and the value function when designing deep learning approximations; (2) constructing a concentration of measure to calculate high-dimensional expectations using only a \textit{single} Monte-Carlo draw for all idiosyncratic shocks; and (3) sampling methods to ensure the model fits along manifolds of interest. 
 \end{rSection}
 
-\begin{rSection}{Skills}
-Julia, Docker, Open-Source Development, Economic Programming, Differential Equations
+\begin{rSection}{Research Assistantships and Software}
+    {\bf \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{Equilibrium Technology Diffusion, Trade, and Growth}} % \hfill {Research Code}
+    \begin{itemize}
+        \item Co-wrote Julia code which solves a forward-looking differential system in steady-state, and computes transition dynamics in response to shocks.
+    \end{itemize}
+
+    {\bf \href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}} % \hfill {Co-Author}
+    \begin{itemize}
+        \item A short note with my advisor about how Optimal Stopping Problems (OSPs) can be reformulated as linear complementarity problems (LCPs), as opposed to the traditional Bellman-style approach.
+    \end{itemize}
+
+    {\bf \href{https://julia.quantecon.org}{QuantEcon Julia Lectures}} % \hfill {Co-Author}
+    \begin{itemize}
+        \item Wrote new lectures, overhauled code, deployed to cloud backends, and supervised RAs.
+    \end{itemize}
+
+    {\bf \href{https://github.com/quantecon/Expectations.jl}{QuantEcon/Expectations.jl}} % \hfill {Research Code}
+    \begin{itemize}
+        \item Uses Gaussian quadrature to take expectations for increased clarity, speed, and accuracy. Accepted as a poster at JuliaCon 2020.
+    \end{itemize}
+
+    {\bf \href{https://github.com/quantecon/InstantiateFromURL.jl}{QuantEcon/InstantiateFromURL.jl}} % \hfill {Research Code}
+    \begin{itemize}
+        \item Allows Julia Jupyter notebooks to run anywhere with proper package versions. Accepted as a talk at JuliaCon 2020 and used in QuantEcon lectures.
+    \end{itemize}
+
+    {\bf \href{https://vse.syzygy.ca}{VSE Syzygy JupyterHub}} % \hfill {Co-Author}
+    \begin{itemize}
+        \item Worked with Dr. Ian Allison of PIMS to maintain a JupyterHub server for faculty and student use. Deployed from Docker for reproducible setup.
+    \end{itemize}
+    
+    
+
 \end{rSection}
 
 \end{document}

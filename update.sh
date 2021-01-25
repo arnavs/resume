@@ -8,6 +8,6 @@ echo "arnavsood.com" > docs/CNAME
 
 ./directory-listing.sh
 
-git add -A
+git add -u
 git commit -m "Update ${commit_date}"
 git push

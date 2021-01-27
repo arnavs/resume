@@ -1,124 +1,296 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Medium Length Professional CV
-% LaTeX Template
-% Version 2.0 (8/5/13)
-%
-% This template has been downloaded from:
-% http://www.LaTeXTemplates.com
-%
-% Original author:
-% Rishi Shah 
-%
-% Important note:
-% This template requires the resume.cls file to be in the same directory as the
-% .tex file. The resume.cls file provides the resume style used for structuring the
-% document.
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% !TEX program = xelatex
 
-%----------------------------------------------------------------------------------------
-%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
-%----------------------------------------------------------------------------------------
+%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Borrowed from Kieran Healy <kjhealy@gmail.com> and Simon Munzert <munzert@hertie-school.org>
+%%% Most recent version is at http://kjhealy.github.com/kjh-vita
 
-\documentclass{resume} % Use the custom resume.cls style
+%%% Because this is a hand-tweaked file, be on the look out for \medksip,
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
 
-\usepackage[left=0.75in,top=0.6in,right=0.75in,bottom=0.6in]{geometry} % Document margins
-\usepackage{hyperref}
+\documentclass[11pt,article,oneside]{memoir}   % based on locally stored memoir-article-styles.sty
+\usepackage{org-preamble-xelatex} % based on locally stored org-preamble-xelatex.sty
+\usepackage{url}
+\usepackage{listings}
+\usepackage{datetime}
+\usepackage[top=0.75in, bottom=1cm, left=4cm, right=3cm, heightrounded, marginparwidth=2.5cm, marginparsep=5mm]{geometry}
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH], \THEYEAR}
+
+% ------ fonts ------%
+%\usepackage{newpxtext}
+%\usepackage[scaled=.97]{cabin} %ss
+%\usepackage[varqu,varl]{inconsolata} % tt
+%\usepackage{amsmath}
+%\usepackage[bigdelims]{newpxmath}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{fontspec}
+\defaultfontfeatures{
+Path = /usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \usepackage{fontawesome5}
-\usepackage{amsmath}
-\usepackage{enumitem}
+\usepackage[default,opentype]{sourcesanspro}
+\usepackage{fancyhdr}
 
-\newcommand{\tab}[1]{\hspace{.2667\textwidth}\rlap{#1}}
-\newcommand{\itab}[1]{\hspace{0em}\rlap{#1}}
-\name{Arnav Sood} % Your name
-\address{} % Your address
+\definecolor{darkred}{rgb}{0.68,0.10,0.10}
+
+\usepackage{soul}
+
+%% Custom hanging indent for vita items
+\def\mybibind{\vspace{0.1in} \noindent \hangindent=1 true cm\hangafter=1}
+
+
+% penalize stuff
+\clubpenalty = 10000      % Schusterjungen
+\widowpenalty = 10000          % Hurenkinder
+\displaywidowpenalty = 10000   % Hurenkinder
+
+% header
+\usepackage{fancyhdr}
+\pagenumbering{gobble}
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+\def\myauthor{Arnav Sood}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myemail{arnav@arnavsood.com}
+\def\myweb{https://arnavsood.com}
+\def\mygit{https://github.com/arnavs}
+\def\myphone{}
+\def\myaffiliation{University of British Columbia}
+% \def\myuni{B.A. Math (NYU)}
+% \def\myoffice{053 Iona Building}
+\date{\today}
+\def\mykeywords{Arnav, Sood, Arnav Sood, Vita, CV, Resume, Economics}
+%\setlength{\parskip}{1em}
+
+\usepackage{hyphenat}
+%\setlength{\emergencystretch}{10pt}
+\hyphenation{Bun-des-tags-wah-len}
+\hyphenation{Wahl-kreis-ebe-ne}
+\hyphenation{Con-sti-tu-ents}
+\hyphenation{Kan-di-da-ten-be-ur-tei-lung}
+\hyphenation{Mann-heim}
+\hyphenation{ge-winnt}
+\hyphenation{Clau-dius}
+
+\rhead{
+  \fontfamily{SourceSansPro-LF}\selectfont
+  \flushright \small
+  ~ \\
+  % \myphone ~~ \faPhone \\
+ {\small  \texttt{\href{mailto:\myemail}{\myemail}} ~~\faEnvelope} \\
+ {\small  \texttt{\href{\myweb}{arnavsood.com}} ~~\faGlobe} \\
+ {\small  \texttt{\href{\mygit}{arnavs}} ~~\faGit} \\
+ {\small  US citizen ~~\faPassport} \\ 
+}
+\lhead{}
+\renewcommand{\headrulewidth}{0pt}
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
 \begin{document}
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
 
-\faIcon{git-square} \href{https://github.com/arnavs}{\tt arnavs} \vline \hspace{0.5 em} {\faIcon{globe}} \href{https://arnavsood.com}{\tt arnavsood.com} \vline \hspace{0.5 em} {\faIcon{envelope}} \href{mailto:arnav@arnavsood.com}{\tt arnav@arnavsood.com} \vline \hspace{0.5 em} \faIcon{passport} USA 
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{{\flushleft \footnotesize\vspace{-1em} \textsf{\textcolor{darkred}{#1}}}}}
 
-\begin{rSection}{Overview}
-   I am a reseacher and programmer working in computational economics. My projects include \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{codebases} for \href{https://github.com/jlperla/KnowledgeDiffusionSimulations.jl}{academic} papers, open-source \href{https://github.com/quantecon/expectations.jl}{software} \href{https://github.com/quantecon/instantiatefromurl.jl}{packages}, and standalone \href{https://datascience.quantecon.org/applications/recidivism.html}{lectures}. 
-   
-   I have extensive experience in differential equations, Julia, and PyTorch. The latter includes logging frameworks, model debugging, execution on cloud instances like AWS DLAMI, and additional tools like PyTorch Lightning.
-\end{rSection}
 
-\begin{rSection}{Employment History}
-Freelance Researcher/Programmer, {\bf Varied Clients} \hfill {Jul. 2020 --- Present} 
-\\ Clients Include: UBC, QuantEcon \smallskip 
-    
-Predoctoral Researcher, {\bf University of British Columbia} \hfill {Jun. 2018 --- Jun. 2020} 
-\\ Advisor: Prof. Jesse Perla \smallskip 
+%% [optional] custom ampersand (font consistent with the one chosen above)
+% \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
 
-Lead Developer, {\bf QuantEcon} \hfill {Jan. 2019 --- Present}
-\\ References: Prof. John Stachurski, Dr. Matt McKay, Dr. Chase Coleman
-\end{rSection}
+%% No bullets on labels
+\renewcommand{\labelitemi}{~}
 
-\begin{rSection}{Education}
-{\bf University of British Columbia} \hfill {Jun. 2018 --- Jun. 2020} 
-\\ Selected Courses (MS and BA.)  % \hfill { A/A+ Grades }
+%% Custom hanging indent for vita items
+%\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
 
-{\bf New York University} \hfill {Sep. 2014 --- May 2018} 
-\\ Bachelor of Arts (Math.) % \hfill { GPA: 3.2 } 
-\\ Minors in Economics, Philosophy 
-\end{rSection}
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
 
-\begin{rSection}{Academic Publications}
-    {\bf Exploiting Symmetry in High-Dimensional Dynamic Programming} \hfill {In-Progress} 
-    \\ (with Jesse Perla, Mahdi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde)    
-\end{rSection}
+% These lines will insert git revision info in the footer, using the vc
+% package---see docs for vc package for details. Comment out this line
+% if you're not using vc, and also remove the \input{vc} line above.
+%\pagestyle{kjh}
+%\thispagestyle{kjhgit}
 
-\begin{rSection}{Other Publications}
-    {\bf \href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}} \hfill {QuantEcon Notes}
-    \\ (with Jesse Perla)
 
-    {\bf \href{https://datascience.quantecon.org/applications/recidivism.html}{Case Study: Recidivism}} \hfill {QuantEcon Datascience}
-    \\ (with Paul Schrimpf, Chase Coleman, Spencer Lyon, Jesse Perla)
-\end{rSection}
+% \pagestyle{empty}
+\pagestyle{fancy}
 
-\begin{rSection}{Software}
-    {\bf \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{PerlaTonettiWaugh.jl}}
-    \\ Codebase for AER paper. Implements a forward-looking differential-algebraic equation (DAE) system in steady state and along transitions.  
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\hfill
 
-    {\bf \href{https://github.com/jlperla/KnowledgeDiffusionSimulations.jl
-    }{KnowledgeDiffusionSimulations.jl}}
-    \\ Codebase for knowledge diffusion simulations. Implements jump diffusion equations and tracks evolution of aggergate indices.
+%% Name
+\noindent{\LARGE \so{\textsc{arnav sood}}}  
+\reversemarginpar
+% \bigskip
 
-    {\bf \href{https://julia.quantecon.org}{QuantEcon Julia Lectures}}
-    \\ Wrote new lectures, overhauled code, deployed to cloud backends, and supervised RAs.
+% \medskip
 
-    {\bf \href{https://github.com/quantecon/Expectations.jl}{QuantEcon/Expectations.jl}} 
-    \\ Uses Gaussian quadrature to take expectations for increased clarity, speed, and accuracy. 
+% %% Personal info
+% \marginhead{{\vskip1.2em} \textsf{personal \\ information}}
+% \setlength{\leftskip}{1cm}
 
-    {\bf \href{https://github.com/quantecon/InstantiateFromURL.jl}{QuantEcon/InstantiateFromURL.jl}} 
-    \\ Allows Julia Jupyter notebooks to run anywhere with proper package versions. Used in QuantEcon lectures.
+% \noindent Immigration: US citizen
 
-    {\bf \href{https://vse.syzygy.ca}{VSE Syzygy JupyterHub}} % \hfill {Co-Author}
-    \\ Worked with Dr. Ian Allison of PIMS to maintain a JupyterHub server for faculty and student use. Deployed from Docker for reproducible setup.
-\end{rSection}
+% \noindent Date of Birth: July 1996
 
-\begin{rSection}{Talks and Posters}
-    % https://pretalx.com/juliacon2020/talk/87JCMX/
-    {\bf Dependency-Aware Jupyter Notebooks} \hfill {JuliaCon 2020}
+% \noindent Degree: B.A. Math (NYU)
 
-    % https://live.juliacon.org/uploads/posters/N9CXCT.pdf
-    {\bf Extending Distributions with Expectations.jl} \hfill {JuliaCon 2020}
-\end{rSection}
+{\vskip 1em}
+\bigskip
 
-\begin{rSection}{Teaching}
-    {\bf University of British Columbia} \hfill {Jun. 2018 --- Jun. 2020}
-    \\ Guest Lecturer, ECON 622 (2019) and ECON 628 (2018)
-    \begin{itemize}
-        \item Prepared and taught occasional lectures to PhD students on software design in Julia.
-        \item Helped students with assignment difficulties.
-    \end{itemize}
+\marginhead{{\vskip1.2em} \textsf{overview}}
+\setlength{\leftskip}{0cm}
+\setlength{\parindent}{1cm}
+I am a reseacher and programmer working in computational economics. My projects include \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{codebases} for academic papers, open-source \href{https://github.com/QuantEcon/InstantiateFromURL.jl}{software packages}, and \href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{lectures}. \\
 
-    {\bf (MIT, Columbia, Princeton, NYU) Splash!} \hfill {Sep. 2014 --- Jun. 2018}
-    \\ Volunteer Teacher
-    \begin{itemize}
-        \item Designed and delivered short technical courses at various ``Splash!'' events for advanced high-school students.
-        \item Content included information economics, analytical statistics, abstract algebra, philosophy of mind, and Play-Doh.
-    \end{itemize}
+I have extensive experience in differential equations, Julia, and PyTorch. The latter includes logging frameworks, model debugging, execution on cloud instances like AWS DLAMI, and additional tools like PyTorch Lightning.
 
-\end{rSection}
+{\vskip 1em}
+\bigskip
+
+
+%% Appointments/Positions
+% \medskip
+\marginhead{\vskip1em employment \\ affiliations}
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{Consulting Researcher/Programmer} \hfill June 2020 --- Present \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent Clients Include: Passive Holdings, UBC, QuantEcon
+\vspace{0.1in} 
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{University of British Columbia} \hfill June 2018 --- June 2020 \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent Predoctoral Fellow, supervised by \href{https://jesseperla.com}{Jesse Perla} \\ 
+Guest Lecturer  \\ 
+Member of \href{https://caida.ubc.ca/faculty-members-caida}{Centre for Artificial Intelligence Design and Action}
+\vspace{0.1in} 
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{QuantEcon} \hfill{Jan. 2019 --- Present} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent Lead Developer \\ 
+\noindent Worked on lecture content, open-source packages, and infrastructure
+
+{\vskip 1em}
+\bigskip
+
+%% Publications and Projects
+\marginhead{\vskip1em publications \\ projects}
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{Exploiting Symmetry in High-Dimensional Dynamic Programming} \hfill{w. coauthors}\\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+Uses PyTorch to accelerate the solution of economic models, by embedding economic facts in the neural approximator \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{\href{https://github.com/QuantEcon/expectations.jl}{Expectations.jl}} \hfill{\href{https://live.juliacon.org/uploads/posters/N9CXCT.pdf}{Poster} from JuliaCon 2020} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+Provides efficient expectation operators for univariate distributions, using Gaussian quadrature \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+
+
+\noindent \textbf{\href{https://github.com/QuantEcon/InstantiateFromURL.jl}{InstantiateFromURL.jl}} \hfill \href{https://live.juliacon.org/talk/87JCMX}{Talk} from JuliaCon 2020 \\ 
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+Allows Julia notebooks to refer to online dependency information, boosting reproducibility/mobility \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{\href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{PerlaTonettiWaugh.jl}} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+Julia codebase for AER paper. Solves differential-algebraic system along transition and at steady state \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{\href{https://github.com/jlperla/KnowledgeDiffusionSimulations.jl}{KnowledgeDiffusionSimulations.jl}} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+Implements large ensemble of jump diffusion equations and track index evolution \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+
+
+{\vskip 1em}
+\bigskip
+
+\setlength{\leftskip}{0cm}
+\marginhead{\vskip1.1em activities}
+
+\noindent \textbf{Free Geek Vancouver} \hfill{Volunteer Tech Support} \vspace{0.1in}
+
+\noindent \textbf{Various Publications} \hfill{Published Author, Fiction and Nonfiction} \vspace{0.1in}
+
+% \noindent \textbf{Splash!}, Various Universities \hfill{Volunteer Teacher} \\ 
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+
+{\vskip 1em}
+\bigskip
+
+
+%% Education
+\setlength{\leftskip}{0cm}
+\marginhead{\vskip1.1em education}
+
+\noindent \textbf{University of British Columbia} \hfill{June 2018 --- June 2020} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+
+\noindent Selected Courses, June 2018 --- June 2020 \vspace{0.1in}
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{New York University}  \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+
+\noindent  B.A. Mathematics, 2018 \\ Minors in Economics, Philosophy \vspace{0.1in}
+
+% \bigskip
+% \begin{flushright}
+% \hfill Generated \monthyeardate\today
+% \end{flushright}
 
 \end{document}

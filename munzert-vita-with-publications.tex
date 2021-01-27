@@ -1,0 +1,650 @@
+%%% A template to produce a nice-looking Curriculum Vitae.
+%%% Borrowed from Kieran Healy <kjhealy@gmail.com>
+%%% Most recent version is at http://kjhealy.github.com/kjh-vita
+
+%%% Because this is a hand-tweaked file, be on the look out for \medskip, 
+%%% \bigskip and \newpage commands here and there, which are used to balance
+%%% the layout or avoid widows & orphans, etc. You should of course add or 
+%%% remove these as needed.
+%%%------------------------------------------------------------------------
+
+\documentclass[11pt,article,oneside]{memoir}   % based on locally stored memoir-article-styles.sty
+\usepackage{org-preamble-xelatex} % based on locally stored org-preamble-xelatex.sty
+\usepackage{url}
+\usepackage{listings}
+\usepackage[top=3cm, bottom=3cm, left=4cm, right=3cm, heightrounded, marginparwidth=2.5cm, marginparsep=5mm]{geometry}
+  
+% ------ fonts ------%
+%\usepackage{newpxtext}
+%\usepackage[scaled=.97]{cabin} %ss
+%\usepackage[varqu,varl]{inconsolata} % tt
+%\usepackage{amsmath}
+%\usepackage[bigdelims]{newpxmath}
+\usepackage[T1]{fontenc}
+\usepackage{textcomp}
+\usepackage{fontspec}
+%\defaultfontfeatures{
+%Path = /usr/local/texlive/2015/texmf-dist/fonts/opentype/public/fontawesome/ }
+%\defaultfontfeatures{
+%Path = /Users/s.munzert/Munzert Dropbox/Simon Munzert/Uni/CV/fontawesome}
+\usepackage{fontawesome}
+\usepackage[default,opentype]{sourcesanspro}
+
+\definecolor{darkred}{rgb}{0.68,0.10,0.10}
+
+\usepackage{soul}
+
+%% Custom hanging indent for vita items
+\def\mybibind{\vspace{0.1in} \noindent \hangindent=1 true cm\hangafter=1}
+
+
+% penalize stuff
+\clubpenalty = 10000      % Schusterjungen
+\widowpenalty = 10000          % Hurenkinder
+\displaywidowpenalty = 10000   % Hurenkinder
+
+% header
+\usepackage{fancyhdr}
+
+
+%%%------------------------------------------------------------------------
+%%% Metadata
+%%%------------------------------------------------------------------------
+\def\myauthor{Simon Munzert}
+\def\mytitle{Vita}
+\def\mycopyright{\myauthor}
+\def\mykeywords{}
+\def\mybibliostyle{plain}
+\def\mybibliocommand{}
+\def\mysubtitle{}
+\def\myaddress{Friedrichstrasse 180, 10117 Berlin}
+\def\myemail{munzert@hertie-school.org}
+\def\myweb{https://simonmunzert.github.io}
+\def\myphone{(+49) 176 6531 1823}
+\def\mytwitter{@simonsaysnothin}
+\def\myaffiliation{Hertie School of Governance}
+\def\myauthor{Simon Munzert}
+\date{\today}
+\def\mykeywords{Simon, Munzert, Simon Munzert, Vita, CV, Resume, Political Science}
+%\setlength{\parskip}{1em}
+
+\usepackage{hyphenat}
+%\setlength{\emergencystretch}{10pt}
+\hyphenation{Bun-des-tags-wah-len}
+\hyphenation{Wahl-kreis-ebe-ne}
+\hyphenation{Con-sti-tu-ents}
+\hyphenation{Kan-di-da-ten-be-ur-tei-lung}
+\hyphenation{Mann-heim}
+\hyphenation{ge-winnt}
+\hyphenation{Clau-dius}
+
+
+
+%%%------------------------------------------------------------------------
+%%% Document
+%%%------------------------------------------------------------------------
+\begin{document}
+%%%------------------------------------------------------------------------
+%%% Local commands
+%%%------------------------------------------------------------------------
+
+%% Marginal header
+%% Note: as the document goes on you may need to introduce a (gradually increasing)
+%% \vspace element to keep the marginal header pleasingly aligned with the first 
+%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or 
+%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
+\newcommand{\marginhead}[1]{\marginpar{{\flushleft \footnotesize\vspace{-1em} \textsf{\textcolor{darkred}{#1}}}}}
+
+
+%% [optional] custom ampersand (font consistent with the one chosen above)
+% \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+%% Custom hanging indent for vita items
+%\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
+\def\labelitemi{~}
+\renewcommand{\labelitemii}{~}
+
+%%%------------------------------------------------------------------------
+%%% Page layout
+%%%------------------------------------------------------------------------
+
+% These lines will insert git revision info in the footer, using the vc
+% package---see docs for vc package for details. Comment out this line
+% if you're not using vc, and also remove the \input{vc} line above.
+%\pagestyle{kjh}
+%\thispagestyle{kjhgit}
+
+
+\pagestyle{empty}
+
+%%%------------------------------------------------------------------------
+%%% Address and contact block
+%%%------------------------------------------------------------------------
+\begin{minipage}[t]{5cm}
+ \flushright \scriptsize 
+ \textbf{Office} \\ Hertie School of Governance \\ Friedrichstr. 180 \\ 10117 Berlin \\ Germany\\  
+\end{minipage}
+\begin{minipage}[t]{2.5cm}
+ \flushright \scriptsize 
+ \textbf{Home} \\ ~\\ Ihnestr. 81 \\ 14195 Berlin \\ Germany\\  
+\end{minipage}
+\hfill
+\begin{minipage}[t]{5cm}
+  \flushright \scriptsize  
+   ~ \\
+   \myphone ~~ \faPhone \\ 
+  {\scriptsize  \texttt{\href{mailto:\myemail}{\myemail}} ~~\faEnvelope} \\
+  {\scriptsize  \texttt{\href{http://twitter.com/simonsaysnothin}{\mytwitter}} ~~\faTwitter }  \\ 
+  {\scriptsize  \texttt{\href{\myweb}{\myweb}} ~~\faGlobe}
+\end{minipage}
+
+\bigskip
+\bigskip
+\bigskip
+
+%% Name 
+\noindent{\LARGE \so{\textsc{simon munzert}}}
+\reversemarginpar
+\bigskip       
+
+\medskip       
+
+%% Personal info
+\marginhead{{\vskip1.2em} \textsf{personal \\ information}}
+\setlength{\leftskip}{1cm}
+
+\noindent Citizenship: German
+
+\noindent Date of birth: December 24, 1985
+
+\noindent Title: Dr.rer.soc.
+
+\noindent Marital status: Married, two daughters (Lola, *2014; Jonna, *2018) 
+
+{\vskip 1em}
+\bigskip
+
+
+%% Appointments/Positions
+% \medskip
+\marginhead{\vskip1em academic \\ employments}
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{Hertie School of Governance} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent  Lecturer in Political Data Science, 2017--Present. \vspace{0.1in}
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{University of Maryland and Joint Program of Survey Methodology} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent  Adjunct assistant professor, 2018--Present. \vspace{0.1in}
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{Humboldt University of Berlin} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent  Postdoctoral research and teaching fellow, Department of Social Sciences, Chair of Comparative Political Behavior (Prof. Dr. Heike Kl\"uver), 2017. \vspace{0.1in}
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{University of Mannheim} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent  Postdoctoral research fellow; founder and manager of the Social Science Data Lab, Mannheim Centre for European Social Research (MZES), 2016. \vspace{0.1in}
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{Duke University} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent  Visiting research fellow, Department of Political Science and Ward Lab, 2014. \vspace{0.1in}
+ 
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{University of Konstanz} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent Research and teaching assistant, Chair for Survey Research (Peter Selb), 2011--2016.  \vspace{0.1in}
+
+\noindent Stipendiary, Center for Quantitative Methods and Survey Research, 2009--2011. Project ``Integrating Disparate Data into a Geographic Information System of the German Electoral Districts'' (together with Peter Selb and Susumu Shikano). \vspace{0.1in}
+
+\noindent Student assistant, 2006--2009. Work at the chairs of Wolfgang Seibel, Rainer Schnell, Thomas Br\"auninger, Susumu Shikano, and Christoph Knill. 
+
+{\vskip 1em}
+%% Education
+\setlength{\leftskip}{0cm}
+\marginhead{\vskip1.1em academic \\ education}
+
+\noindent \textbf{University of Konstanz} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+\noindent Ph.D., Political Science, Graduate School of Decision Sciences, University of Konstanz, 2015. \\ Grade: summa cum laude. Thesis: \emph{Contributions to the Measurement of Public Opinion in Subpopulations.} Committee: Peter Selb, Susumu Shikano, Michael D. Ward.  \vspace{0.1in}
+
+\noindent  M.A., Politics and Public Administration, University of Konstanz, 2011. \\ Grade: 1.0; ranked 1st among 35 students. Thesis: \emph{Political Representation Of Constituents' Attitudes Towards Nuclear Power Phaseout. A Bayesian Hierarchical Approach Exploiting Sparse Survey Data And Geographic Information.} Supervisors: Peter Selb, Susumu Shikano. \vspace{0.1in}
+
+\noindent  B.A., Political and Administrative Science, University of Konstanz, 2009.\\ Grade: 1.5; ranked 5th among 61 students. Thesis: \emph{Vote Overreporting. Ein einfaches Erkl\"arungsmodell auf Basis der Wahlbeteiligung.} Supervisor: Peter Selb.\normalsize 
+ 
+ 
+ {\vskip 1em}
+ % define page header
+\pagestyle{fancy}
+\fancyhf{}
+\rhead{\thepage}
+\lhead{\textit{Simon Munzert}}
+
+ %% Grants and scholarships
+ \setlength{\leftskip}{0cm}
+\marginhead{\vskip1.5em research grants \newline and scholarships}
+
+\mybibind 2018 2018--2019. Hertie School of Governance Faculty Activity Fund, AY 2018/19. \textit{``What Should We Be Allowed to Say? Citizens' Preferences for Hate Speech Regulation.''} Main principal investigator; co-principal investigator: Prof. Dr. Daniela Stockmann, Prof. Dr. Richard Traunm\"uller. Total amount: EUR 15,350.
+
+\mybibind 2017 2017--2019. Daimler and Benz Foundation, Postgraduates and Junior Professors Fellowship Program. \textit{``Citizen and Elite Activity on the Wikipedia Market Place of Political Information.''} Total amount: EUR 40,000.
+
+\mybibind 2017 2017--2019. VolkswagenStiftung. \textit{``Paying Attention to Attention: Media Exposure and Opinion Formation in an Age of Information Overload.''} Main principal investigator; co-principal investigators: Dr. Pablo Barberá, Dr. Andrew Guess, Dr. JungHwan Yang. 2017--2019. Total amount: EUR 736,600.
+
+\mybibind 2014 2014. DFG / Excellence Initiative Research Fellowship at the Department of Political Science, Duke University (granted for five months). Total amount: EUR 6,750.
+
+\mybibind 2009 2009--2011. Stipendiary at the Center for Quantitative Methods and Survey Research. Total amount: approx. EUR 24,000.
+
+ 
+ 
+ {\vskip 1em}
+ %% Awards
+ \setlength{\leftskip}{0cm}
+\marginhead{\vskip1.5em awards}
+
+\mybibind 2014 2014. ALLBUS Award for the best paper published using data from the German General Social Survey, awarded by GESIS--Leibniz Institute for the Social Sciences (together with Paul Bauer) for \emph{``Political Depolarization in German Public Opinion, 1980-2010''}.
+
+\mybibind 2014 2014. Best Paper Award of the German Society for Electoral Studies (DGfW), together with Peter Selb, for \emph{``Estimating Constituency Preferences from Sparse Survey Data Using Auxiliary Geographic Information''}.
+
+\mybibind 2011 2011. VEUK Award (Verein der Ehemaligen der Universit\"at Konstanz) for best M.A. thesis.
+
+
+
+{\vskip 1em}
+%% invited talks and workshops
+\marginhead{\vskip2.2em publications}
+\medskip
+
+
+\mybibind \textit{Monographs}
+
+\mybibind  \textbf{Simon Munzert}. 2015. \emph{\href{http://nbn-resolving.de/urn:nbn:de:bsz:352-0-296799}{Contributions to the Measurement of Public Opinion in Subpopulations.}} Konstanz: Universit\"at Konstanz. PhD Thesis.
+
+\mybibind \textbf{Simon Munzert}, Christian Rubba, Peter Mei\ss ner, and Dominic Nyhuis. 2014. \emph{\href{http://eu.wiley.com/WileyCDA/WileyTitle/productCd-111883481X.html}{Automated Data Collection with R. A Practical Guide to Web Scraping and Text Mining.}} Chichester: John Wiley \& Sons. %\\ 
+%{Accompanying website: \href{http://r-datacollection.com/}{http://r-datacollection.com/} \\
+%Review in \textit{JStatSoft}: \href{https://www.jstatsoft.org/article/view/v068b03}{https://www.jstatsoft.org/article/view/v068b03}
+%}
+
+{\vskip 1em}
+\mybibind \textit{Journal articles (peer-reviewed)}
+
+\mybibind Peter Selb and \textbf{Simon Munzert}. ``Examining a Most Likely Case for Strong Campaign Effects: Hitler's Speeches and the Rise of the Nazi Party, 1927--1933.'' Forthcoming at \textit{American Political Science Review}.
+
+\mybibind Lukas F. St\"otzer, Marcel Neunhoeffer, Thomas Gschwend, \textbf{Simon Munzert}, and Sebastian Sternberg. ``Forecasting Elections in Multi-Party Systems: A Bayesian Approach Combining Polls and Fundamentals.'' Forthcoming at \textit{Political Analysis}.
+
+\mybibind Sascha G{\"o}bel and \textbf{Simon Munzert}. 2018.``\href{http://journals.sagepub.com/doi/abs/10.1177/0894439317703579}{Political Advertising on the Wikipedia Market Place of Information.}'' \emph{Social Science Computer Review} 36(2): 157--175.
+
+\mybibind \textbf{Simon Munzert}, Lukas St\"otzer, Thomas Gschwend, Marcel Neunhoeffer, and Sebastian Sternberg. 2017. ``\href{http://zweitstimme.org/}{Zweitstimme.org. Ein strukturell-dynamisches Vorhersagemodell f\"ur Bundestagswahlen.}'' \emph{Politische Vierteljahresschrift} 58(3): 418--441. \\Accompanying website: \href{http://zweitstimme.org/}{Zweitstimme.org}.
+
+\mybibind \textbf{Simon Munzert}. 2017. ``\href{http://www.sciencedirect.com/science/article/pii/S0169207017300031}{Forecasting elections at the constituency level: A correction-- combination procedure.}'' \emph{International Journal of Forecasting} 33(2): 467--481.
+
+\mybibind  \textbf{Simon Munzert} and Peter Selb. 2017. ``\href{http://ssc.sagepub.com/content/early/2015/10/30/0894439315616325.abstract}{Measuring Political Knowledge in Web-Based Surveys: An Experimental Validation of Visual versus Verbal Instruments.}'' \emph{Social Science Computer Review} 25(2): 167--183.
+
+\mybibind  Peter Selb and \textbf{Simon Munzert}. 2016. ``\href{http://www.tandfonline.com/doi/abs/10.1080/09644008.2015.1121454?journalCode=fgrp20}{Forecasting the 2013 Bundestag Election Using Many Polls and Historical Election Results.}'' \emph{German Politics} 25(1):~73--83.
+
+\mybibind  Michael Herrmann, \textbf{Simon Munzert}, and Peter Selb. 2016. ``\href{http://onlinelibrary.wiley.com/doi/10.1111/rssa.12130/abstract}{Determining the Effect of Strategic Voting on Election Results.}'' \emph{Journal of the Royal Statistical Society (Series A)} 179(2): 583--605.
+
+\mybibind  Julian Bernauer and \textbf{Simon Munzert}. 2014. ``\href{http://dx.doi.org/10.1080/00344893.2014.902221}{Loyal to the Game? Strategic Policy Representation in Mixed Electoral Systems.}'' \emph{Representation} 50(1):~83--97.
+
+\mybibind  \textbf{Simon Munzert} and Paul Bauer. 2013. ``\href{http://journals.cambridge.org/action/displayAbstract?fromPage=online&aid=8936714}{Political Depolarization in German Public Opinion, 1980--2010.}'' \emph{Political Science Research and Methods} 1(1):~67--89. \emph{Winner of the ALLBUS Award 2015 for the best paper published using data from the German General Social Survey, awarded by GESIS--Leibniz Institute for the Social Sciences.}
+
+\mybibind Peter Selb, Michael Herrmann, \textbf{Simon Munzert}, Thomas Sch\"ubel, and Susumu Shikano. 2013. ``\href{http://www.sciencedirect.com/science/article/pii/S0169207013000344}{Forecasting Runoff Elections Using Candidate Evaluations From First Round Exit Polls.}'' \emph{International Journal of Forecasting} 29:~541--547. 
+
+\mybibind  Peter Selb and \textbf{Simon Munzert}. 2013. ``\href{http://www.sciencedirect.com/science/article/pii/S0261379412001369}{Voter Overrepresentation, Vote Misreporting and Turnout Bias in Postelection Surveys.}'' \emph{Electoral Studies} 32(1):~186--196.
+
+\mybibind  Peter Selb and \textbf{Simon Munzert}. 2011 ``\href{http://pan.oxfordjournals.org/content/19/4/455.short}{Estimating Constituency Preferences from Sparse Survey Data Using Auxiliary Geographic Information.}'' \emph{Political Analysis} 19(4):~455--470. \emph{Winner of the Best Paper Award 2015 of the German Society for Electoral Studies (DGfW).}
+
+
+{\vskip 1em}
+\mybibind \textit{Other articles}
+
+\mybibind  \textbf{Simon Munzert}. 2014. ``\href{http://www.zpol.nomos.de/archiv/2014/heft-1-2/}{Big Data in der Forschung! Big Data in der Lehre? Ein Vorschlag zur Erweiterung der bestehenden Methodenausbildung.}'' \emph{Zeitschrift f\"ur Politikwissenschaft} 24(1-2):~207--222.
+
+%{\vskip 1em}
+\mybibind \textit{Book chapters}
+
+\mybibind \textbf{Simon Munzert} and Dominic Nyhuis. Forthcoming. ``Die Nutzung von Webdaten in den Sozialwissenschaften,'' in \emph{Handbuch Methoden der Politikwissenschaft}, edited by Claudius Wagemann, Achim Goerres, and Markus Siewert. Heidelberg: Springer.
+
+\mybibind \textbf{Simon Munzert}. 2018. ``\href{https://www.nomos-elibrary.de/10.5771/9783845286556-379/16-auf-dem-weg-zu-einer-fundierten-softwareausbildung-in-der-politikwissenschaft?page=1}{Auf dem Weg zu einer fundierten Softwareausbildung in der Politikwissenschaft},'' in \emph{Computational Social Science. Die Analyse von Big Data}, edited by Andreas Bl\"atte, Joachim Behnke, Kai-Uwe Schnapp, and Claudius Wagemann. Baden-Baden: Nomos, 379--402. 
+
+\mybibind Susumu Shikano, \textbf{Simon Munzert}, Thomas Sch\"ubel, Michael Herrmann, and Peter Selb. 2014. ``\href{http://link.springer.com/chapter/10.1007/978-3-658-05008-5_4}{Eine empirische Sch\"atzmethode der Valenz-Issues auf der Basis der Kandidatenbeurteilung am Beispiel der Konstanzer Oberb\"urgermeisterwahl 2012},'' in \emph{Jahrbuch f\"ur Handlungs- und Entscheidungstheorie 8}, edited by Andr\'e B\"achtiger, Eric Linhart, and Bernhard Kittel. Wiesbaden: Springer, 113--131.
+
+
+{\vskip 1em}
+\mybibind \textit{Book reviews}
+
+\mybibind \textbf{Simon Munzert}. 2014. \href{http://www.jstatsoft.org/v61/b01}{Review of \emph{XML and Web Technologies for Data Sciences with R}} by Deborah Nolan and Duncan Temple Lang. \emph{Journal of Statistical Software} 81: Book Review~1.
+
+
+{\vskip 1em}
+\mybibind \textit{Papers under review}
+
+\mybibind Andreas E. Murr and \textbf{Simon Munzert}. ``Forecasting Turnout at UK Elections.''
+
+{\vskip 1em}
+\mybibind \textit{Working papers}
+
+\mybibind \textbf{Simon Munzert}. ``Using Wikipedia Article Traffic Volume to Measure Public Issue Attention.''
+
+\mybibind \textbf{Simon Munzert}. ``Measuring the Significance of Political Elites.''
+
+\mybibind \textbf{Simon Munzert}, Pablo Barberá, Andrew Guess, and JungHwan Yang. ``Media Exposure and Opinion Formation in an Age of Information Overload.''
+
+\mybibind \textbf{Simon Munzert}, Pablo Barberá, Andrew Guess, and JungHwan Yang. ``What and How Do Citizens Learn from Voting Advice Applications?''
+
+%\mybibind Paul C. Bauer, Pablo Barber\'a, and \textbf{Simon Munzert}. ``The Quality of Citations: Towards Quantifying Qualitative Impact in Social Science Research.'' 
+
+
+%% invited talks and workshops
+\clearpage
+{\vskip 1em}
+\marginhead{\vskip0em invited talks \newline \& workshops}
+\medskip
+{\vskip -2em}
+
+\mybibind  ``Web Scraping and APIs.'' Joint Program in Survey Methodology, Bureau of Labor Statistics, Washington, DC, 2018.
+
+\mybibind  ``Political Economy in the Computational Age.'' Hertie School of Governance, Berlin, 2018.
+
+\mybibind  ``A Primer to Web Scraping and Text Mining with R.'' Geschwister Scholl Institute, Ludwig Ma-ximilian University of Munich, 2018.
+
+\mybibind  ``Citizen and Elite Activity on Wikipedia.'' Hertie School of Governance, Berlin, 2017.
+
+\mybibind  ``Media Exposure and Opinion Formation.'' USC, Los Angeles, 2017.
+
+\mybibind  ``International Research in Computational Social Sciences.'' GESIS Cologne, 2017.
+
+\mybibind  ``Election Forecasting with R.'' University of Konstanz, 2017.
+
+\mybibind  ``A Primer to Web Scraping with R.'' AAPOR Webinar, 2017.
+
+\mybibind  ``A Primer to Web Scraping with R.'' European University Institute, Florence, 2017.
+
+\mybibind  ``Beyond the Crystal Ball: Scientific Forecasts of the 2017 German Federal Election.'' Hertie School of Governance, Berlin, 2017.
+
+\mybibind  ``Networks of Knowledge and the Study of Political Behavior.'' Keynote speech, Graduate School of Decision Sciences, Konstanz, 2016.
+
+\mybibind  ``Examining a Most Likely Case for Strong Campaign Effects: Hitler’s Speeches and the Rise of the Nazi Party, 1927--1933.'' University of Mannheim, 2016.
+
+\mybibind  ``A Primer on Web Scraping with R.'' Joint Statistical Meetings, Chicago, 2016.
+
+\mybibind  ``Empirical Economic and Social Research Workshop.'' ZEW/MZES Mannheim, 2016.
+
+\mybibind  ``International Research in Computational Social Sciences.'' GESIS Cologne, 2016.
+
+\mybibind  ``Measuring Public Attention using Wikipedia Access Statistics.'' ZU Friedrichshafen, 2015.
+
+\mybibind  ``Measuring Political Knowledge in Web-Based Surveys.'' GESIS Mannheim, 2015.
+  
+\mybibind  ``Introduction to Web Scraping with R.'' Wissenschaftszentrum Berlin, 2015.
+
+\mybibind  ``A Primer on Web Scraping with R.'' University of Bamberg, 2015.
+  
+\mybibind  ``Web Scraping with R.'' Workshop, Duke University, 2014.
+ 
+\mybibind  ``Automated Data Collection in the World Wide Web with R.'' University of Bern, 2014.
+
+\mybibind  ``Introduction to Web Scraping with R.'' University of Zurich, 2013.
+
+\mybibind  ``Are Voters Really Sensitive to Weather Conditions? Turnout at German Federal Elections under the Meteorological Microscope.'' Lange Nacht der Wissenschaft, Konstanz, 2012.
+
+\mybibind  ``Introduction to R and Web Scraping.'' University of Mannheim, 2012.
+ 
+\mybibind  ``Estimating Constituency Preferences from Sparse Survey Data Using Auxiliary Geographic Information.'' SciencePo Paris, 2012. 
+
+{\vskip 2em}
+%% conferences with presentations
+\marginhead{\vskip2.2em conferences with \newline presentations}
+\medskip
+
+\mybibind Annual Conference of the DVPW Working Group on Elections: 2015
+
+\mybibind Annual Conference of the DVPW Working Group on Political Methodology: 2014, 2016 (co-organizer)
+
+\mybibind Annual Conference of the American Political Science Association (APSA): 2017 (discussant)
+
+\mybibind Annual Conference of the Midwest Political Science Association (MPSA): 2014 
+
+\mybibind Conference of the European Survey Research Association (ESRA): 2011, 2013 (panel chair), 2015, 2017
+
+\mybibind General Conference of the European Political Science Association (EPSA): 2012, 2013, 2014 (panel chair, discussant), 2016 (discussant), 2017
+
+\mybibind Annual Convention of the Swiss Political Science Association (SVPW): 2013 (discussant)
+
+\mybibind Webdatanet Conference: 2015 (roundtable organizer)
+
+\mybibind General Online Research Conference: 2018 (track chair)
+
+\mybibind The Empiricist's Challenge Conference: 2015 
+
+
+%% invited talks and workshops
+{\vskip 1em}
+%% conferences with presentations
+\marginhead{\vskip2.2em teaching}
+\medskip
+
+%{\vskip 1em}
+\mybibind \textit{Hertie School of Governance}
+
+{\vskip -.5em}
+\mybibind Statistics II: Time-Series Panel Data \& Maximum Likelihood (MPP)
+
+{\vskip -.5em}
+\mybibind Election Forecasting (MPP)
+
+{\vskip -.5em}
+\mybibind Web Data Collection and Social Media Mining (MPP \& MIA)
+
+{\vskip .5em}
+\mybibind \textit{International Program in Survey and Data Science}
+
+{\vskip -.5em}
+\mybibind A Primer to Web Scraping with R (executives)
+
+{\vskip .5em}
+\mybibind \textit{Humboldt University}
+
+{\vskip -.5em}
+\mybibind Methods of Election Forecasting (undergraduate level; in German)
+
+{\vskip -.5em}
+\mybibind Web Data Collection and Social Media Mining (graduate level)
+
+{\vskip .5em}
+\mybibind \textit{Mannheim Centre for European Social Research}
+
+{\vskip -.5em}
+\mybibind A Primer to Web Scraping with R (graduate level)
+
+{\vskip -.5em}
+\mybibind Recent Advances in R (graduate level)
+
+{\vskip .5em}
+\mybibind \textit{University of Konstanz}
+
+{\vskip -.5em}
+\mybibind Introduction to Stata (undergraduate level; in German)
+
+{\vskip -.5em}
+\mybibind Introduction to Questionnaire Design (undergraduate level, in German)
+
+{\vskip -.5em}
+\mybibind Computational Political Science (undergraduate level)
+
+{\vskip -.5em}
+\mybibind Data Collection in the World Wide Web (graduate level, in German)
+
+{\vskip -.5em}
+\mybibind Methods of Election Forecasting (graduate level, in German)
+
+{\vskip -.5em}
+\mybibind Introduction to Survey Methodology with R (graduate level)
+
+
+{\vskip 1em}
+%% service to the profession
+\marginhead{\vskip1.5em service to the \newline profession}
+%{\vskip -2.2em}
+
+\mybibind Referee for
+\emph{American Political Science Review},
+\emph{British Journal of Political Science},
+\emph{Data},
+\emph{IC2S2 2017},
+\emph{Journal of Elections, Public Opinion and Parties},
+\emph{Knowledge and Information Systems},
+\emph{Party Politics},
+\emph{Political Behavior},
+\emph{Political Communication},
+\emph{Political Science Research and Methods},
+\emph{Politische Vierteljahresschrift},
+\emph{Public Choice},
+\emph{Public Opinion Quarterly},
+\emph{Sage Open},
+\emph{Social Science Computer Review},
+\emph{Survey Research Methods},
+\emph{Swiss Political Science Review},
+\emph{West European Politics}.
+
+\mybibind Manuscript review for \emph{John Wiley \& Sons}. 
+
+\mybibind Conference/workshop organizer of \emph{Political Economy in the Computational Age Workshop, 2018, Berlin} (co-organizer), \emph{General Online Research 2018, Cologne} (chair of track ``Politics and Communication''), \emph{Citizen and Elite Activity on Wikipedia Workshop, 2017, Berlin} (organizer), \emph{Media Exposure and Opinion Formation Workshop, 2017, Los Angeles} (co-organizer), \emph{DVPW Working Group on Political Methodology Meeting 2016, Mannheim} (co-organizer), \emph{Webdatanet Conference 2015, Salamanca} (roundtable organizer).
+
+%\mybibind Editor of the student journal ``PoWalter'', 2005--2009, Department of Politics and Public Administration, University of Konstanz. 
+
+\mybibind Member of \emph{American Political Science Association}, \emph{European Survey Research Association}, \emph{European Political Science Association}, \emph{Deutsche Vereinigung f\"ur Politische Wissenschaft}.
+
+
+{\vskip 1em}
+%% service to the profession
+\marginhead{\vskip2.2em institutional \newline service}
+\medskip
+
+\mybibind Member of the PhD Board, 2018--Present, Hertie School of Governance. 
+
+\mybibind Student representative in the study commission, 2007, Department of Politics and Public Administration, University of Konstanz. 
+
+\mybibind Student representative in search committee ``Methoden der empirischen Politikforschung'', 2007, Department of Politics and Public Administration, University of Konstanz. 
+
+
+%% survey project management
+{\vskip 1em}
+%% service to the profession
+\marginhead{\vskip2.2em survey project \newline management}
+\medskip
+
+
+\mybibind Paying Attention to Attention Panel Survey, German Panel (``Politik und Medien''), 2017/18. 
+
+\mybibind Political Science and Public Administration Alumni Survey, University of Konstanz, 2014/15.
+
+%\mybibind University of Konstanz Canteen survey, 2014. 
+
+\mybibind Journalist Expert Survey on the German Federal Election, 2013. 
+
+\mybibind Survey on Studies and Politics, University of Konstanz, 2012. 
+
+\mybibind Exit poll at Konstanz mayoral election, 2012. 
+
+{\vskip 1em}
+%% media attention
+\marginhead{\vskip2.1em media attention}
+\medskip
+
+
+
+\mybibind detektor.fm, Apr 27, 2018, \href{https://detektor.fm/wissen/wikipedia-wehrt-sich}{``Wikipedia wehrt sich---Rassismus l\"oschen fehlgeschlagen''} by Doris Hellpoldt and Patrick Ehrenberg.
+
+\mybibind The Monkey Cage, Sep 23, 2017, \href{https://www.washingtonpost.com/news/monkey-cage/wp/2017/09/23/new-german-election-forecast-merkels-party-will-win-but-lose-seats/}{``New German election forecast: Merkel's party will win but lose seats''}.
+
+\mybibind Financial Times, Sep 20, 2017, \href{https://www.ft.com/content/1e3facea-9d48-11e7-8cd4-932067fbf946}{``German election: AfD's advance in six charts''} by Martin Stabe and Haluka Maier-Borst.
+
+\mybibind Merkur, Sep 18, 2017, \href{https://www.merkur.de/politik/erststimmen-studie-diese-wahlkreise-sind-noch-offen-zr-8694614.html}{``Erststimmen-Vorhersage: Diese Wahlkreise sind noch offen''} by Florian Naumann.
+
+\mybibind Frankfurter Allgemeine Zeitung Online, Aug 30, 2017, \href{http://www.faz.net/aktuell/wissen/die-debatte-meinungsforscher-in-der-krise-15175402.html?printPagedArticle=true#pageIndex_0}{``Meinungsforscher in der Krise?''} by Rebecca Winkels.
+
+\mybibind Die-Debatte.org, Aug 29, 2017, \href{https://www.die-debatte.org/meinungsforschung-zukunft/}{``Meinungsforschung der Zukunft''} by Rebecca Winkels.
+
+\mybibind ARD Hauptstadtstudio Blog, May 4, 2017, \href{http://blog.ard-hauptstadtstudio.de/wir-wissen-bereits-wer-die-bundestagswahl-gewinnt-vielleicht/}{``Wir wissen bereits, wer die Bundestagswahl gewinnt -- vielleicht''} by Marko Milovanovic.
+
+\mybibind Spektrum.de, Nov 21, 2016, \href{http://www.spektrum.de/news/wie-funktioniert-wikipedia/1430301}{``Wikipedia -- Liebling der Wissenschaft''} by Stefan Mey.
+
+\mybibind Slate.fr, Aug 19, 2016, \href{http://www.slate.fr/story/122345/hitler-orateur-surestime}{``Hitler, cet orateur surestim\'e''} by Jean-Marie Pottier.
+
+\mybibind Statistics Views, Dec 15, 2014, \href{http://www.statisticsviews.com/details/feature/6354541/Automated-Data-Collection-with-R-A-Practical-Guide-to-Web-Scraping-and-Text-Mini.html}{``Automated Data Collection with R: A Practical Guide to Web Scraping and Text Mining. An interview with co-author Simon Munzert.''}
+
+\mybibind S\"udkurier, Aug 27, 2013, ``Erste deutschlandweite Umfragen auf Wahlkreisebene.''
+
+%\mybibind The Monkey Cage, 22 August 2013, \href{http://themonkeycage.org/2013/08/not-much-political-polarization-in-europe/}{``(Not Much) Political Polarization in Europe''} by Larry Bartels.
+
+\mybibind The Monkey Cage, Jul 25, 2013, \href{http://themonkeycage.org/2013/07/political-depolarization-in-germany/}{``Political Depolarization in Germany''} by Andrew Gelman.
+
+%\mybibind S\"udkurier, Jul 8, 2012, ``Was die Forscher zur OB-Wahl sagen.''
+
+\mybibind S\"udkurier, May 2, 2012, ``Wie das Wetter die Politik beeinflusst.''
+
+
+{\vskip 1em}
+%% skills
+\marginhead{\vskip2.2em skills}
+\medskip
+
+\mybibind \emph{Software}: R, Stata, SPSS, \LaTeX, JAGS, WinBUGS, QuantumGIS, SQL; HTML, CSS, XML, XPath; code repository and replication archive: \href{https://github.com/simonmunzert}{github.com/simonmunzert}
+
+\mybibind \emph{Languages}: German (native), English (fluent)
+
+
+{\vskip 1em}
+%% media attention
+\marginhead{\vskip2.1em references}
+\medskip
+
+%\mybibind Available upon request.
+
+%\mybibind Heike Kl\"uver (Humboldt University of Berlin, Institute of Social Sciences, 10099 Berlin, heike.kluever@hu-berlin.de), Professor of Comparative Political Behavior. 
+
+\mybibind Peter Selb (University of Konstanz, Department of Politics and Public Administration, D-78457 Konstanz, \emph{phone:} +49 (0) 7531-88-2321, \emph{email:} peter.selb@uni-konstanz.de), Professor of Survey Research. \emph{My first PhD supervisor and regular co-author.} 
+
+\mybibind Michael D. Ward (Duke University, Department of Political Science, Durham, North Carolina, \emph{phone:} +1 919-660-4373, \emph{email:} michael.d.ward@duke.edu), Professor emeritus of Political Science. \emph{My external PhD supervisor and mentor during my research stay at Duke University.} 
+
+%\mybibind Thomas Gschwend (University of Mannheim, Department of Political Science and Mannheim Centre for European Social Research, D-68161 Mannheim, \emph{phone:} +49 (0) 621-181-2087, \emph{email:} gschwend@uni-mannheim.de), Professor of Quantitative Methods in the Social Sciences. \emph{A collaborator on research projects.} 
+
+\mybibind Frauke Kreuter (University of Mannheim, Department of Sociology and Mannheim Centre for European Social Research, D-68161 Mannheim, \emph{phone:} +49 (0)621 181-2003, \emph{email:} frauke.kreuter@uni-mannheim.de), Professor for Statistics and Methodology, University of Mannheim; Director of the Joint Program in Survey Methodology, University of Maryland, Head of Statistical Methods Research Department, Institute for Employment Research, Nuremberg. \emph{Director of the Joint Program in Survey Methodology and founder of the International Program in Survey and Data Science, in which I teach.} 
+
+
+\bigskip 
+\begin{flushright}
+ \includegraphics[width=.15\textwidth]{signature-short} \\
+\hfill Berlin, July 2018.
+\end{flushright}
+
+
+\end{document}

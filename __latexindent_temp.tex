@@ -4,7 +4,7 @@
 %%% Borrowed from Kieran Healy <kjhealy@gmail.com> and Simon Munzert <munzert@hertie-school.org>
 %%% Most recent version is at http://kjhealy.github.com/kjh-vita
 
-%%% Because this is a hand-tweaked file, be on the look out for \medksip,
+%%% Because this is a hand-tweaked file, be on the look out for \medksip, \hspace
 %%% \bigskip and \newpage commands here and there, which are used to balance
 %%% the layout or avoid widows & orphans, etc. You should of course add or
 %%% remove these as needed.
@@ -167,7 +167,7 @@ Path = /usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \setlength{\parindent}{1cm}
 I am a researcher and programmer working in computational economics. My projects include \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{codebases} for academic papers, open-source \href{https://github.com/QuantEcon/InstantiateFromURL.jl}{software packages}, and \href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{lectures}. \\
 
-I have extensive experience with differential equations, Julia, and PyTorch. The latter includes logging frameworks, model debugging, execution on cloud instances like AWS DLAMI, and additional tools like PyTorch Lightning.
+I have extensive experience with differential equations, Julia, and PyTorch. The latter includes logging frameworks, model debugging, execution on cloud instances like Amazon EC2, and additional tools like PyTorch Lightning.
 
 {\vskip 1em}
 \bigskip
@@ -208,15 +208,46 @@ Member of \href{https://caida.ubc.ca/faculty-members-caida}{Centre for Artificia
 {\vskip 1em}
 \bigskip
 
+%% Education
+\setlength{\leftskip}{0cm}
+\marginhead{\vskip1.1em education}
+
+\noindent \textbf{University of British Columbia} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+
+\noindent Economics Courses, June 2018 --- June 2020 \vspace{0.1in}
+
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{New York University}  \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+
+\noindent  B.A. Mathematics, 2018 \\ Minors in Economics, Philosophy 
+
+
+{\vskip 1em}
+\bigskip
+
+
 %% Publications and Projects
-\marginhead{\vskip1em publications \\ projects}
+\marginhead{\vskip1em publications}
 \setlength{\leftskip}{0cm}
 
 \noindent \textbf{Exploiting Symmetry in High-Dimensional Dynamic Programming} \hfill{w. coauthors}\\
 
 \setlength{\leftskip}{1cm}
 \vspace{-0.15in}
-Uses PyTorch to accelerate the solution of economic models, by embedding economic facts in the neural approximator \vspace{0.1in}
+Uses PyTorch to accelerate the solution of economic models, by embedding economic facts in the neural approximator 
+\setlength{\leftskip}{0cm}
+
+{\vskip 1em}
+\bigskip
+
+\marginhead{\vskip1em software}
 \setlength{\leftskip}{0cm}
 
 \noindent \textbf{\href{https://github.com/QuantEcon/expectations.jl}{Expectations.jl}} \hfill{\href{https://live.juliacon.org/uploads/posters/N9CXCT.pdf}{Poster} from JuliaCon 2020} \\
@@ -234,20 +265,49 @@ Provides efficient expectation operators for univariate distributions, using Gau
 Allows Julia notebooks to refer to online dependency information, boosting reproducibility/mobility \vspace{0.1in}
 \setlength{\leftskip}{0cm}
 
-\noindent \textbf{\href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{PerlaTonettiWaugh.jl}} \\
+\noindent \textbf{\href{https://github.com/arnavs/PkgUtils.jl}{PkgUtils.jl}}  \\ 
 
 \setlength{\leftskip}{1cm}
 \vspace{-0.15in}
-Julia codebase for AER paper. Solves differential-algebraic system along transition and at steady state \vspace{0.1in}
+Various package utilities
 \setlength{\leftskip}{0cm}
 
-\noindent \textbf{\href{https://github.com/jlperla/KnowledgeDiffusionSimulations.jl}{KnowledgeDiffusionSimulations.jl}} \\
+{\vskip 1em}
+\bigskip
+
+\marginhead{\vskip1em other writing}
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{\href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}} \hfill with Jesse Perla \\ 
 
 \setlength{\leftskip}{1cm}
 \vspace{-0.15in}
-Implements large ensemble of jump diffusion equations and track index evolution \vspace{0.1in}
+Demonstrates how optimal stopping problems can be solved more efficiently as LCPs than as a free-boundary problem \\ 
+\hspace*{1cm} \href{https://quantecon.github.io/SimpleDifferentialOperators.jl/v0.4/generated/LCP_advanced.html}{Computational Appendix} \vspace{0.1in}
 \setlength{\leftskip}{0cm}
 
+\noindent \textbf{\href{https://dailysciencefiction.com/science-fiction/other-worlds-sf/arnav-sood/local-perturbation}{Local Perturbation}} \hfill Daily Science Fiction \\ 
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+Applied comparative statics \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{\href{https://dailysciencefiction.com/fantasy/fantasy/arnav-sood/customer-feedback-secondhand-alchemical-goods}{Customer Feedback (Secondhand Alchemical Goods)}} \hfill Daily Science Fiction \\ 
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+Discussion of various transmutation schemes \\ 
+\hspace*{1cm}\href{https://microverses.net/archives/250}{Review} \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+
+\noindent \textbf{\href{http://blanketsea.com/2019/09/18/bounded-rationality-by-arnav-sood/}{Bounded Rationality}} \hfill Blanket Sea \\ 
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+Causes and effects of cognitive constraints \\ 
+\hspace*{1cm}Pushcart Prize nominee 
+\setlength{\leftskip}{0cm}
 
 {\vskip 1em}
 \bigskip
@@ -257,7 +317,14 @@ Implements large ensemble of jump diffusion equations and track index evolution 
 
 \noindent \textbf{Free Geek Vancouver} \hfill{Volunteer Tech Support} \vspace{0.1in}
 
-\noindent \textbf{Various Publications} \hfill{Published Author, Fiction and Nonfiction} \vspace{0.1in}
+\noindent \textbf{Splash!}, Various Universities \hfill{Volunteer Teacher} \\ 
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.13in}
+Taught free one-hour classes to high-school students  \\ 
+\hspace*{1cm}Subjects included information economics, statistics, abstract algebra, philosophy of mind, and Play-Doh \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+
 
 % \noindent \textbf{Splash!}, Various Universities \hfill{Volunteer Teacher} \\ 
 
@@ -267,26 +334,6 @@ Implements large ensemble of jump diffusion equations and track index evolution 
 {\vskip 1em}
 \bigskip
 
-
-%% Education
-\setlength{\leftskip}{0cm}
-\marginhead{\vskip1.1em education}
-
-\noindent \textbf{University of British Columbia} \hfill{June 2018 --- June 2020} \\
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-
-\noindent Selected Courses, June 2018 --- June 2020 \vspace{0.1in}
-
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{New York University}  \\
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-
-\noindent  B.A. Mathematics, 2018 \\ Minors in Economics, Philosophy \vspace{0.1in}
 
 % \bigskip
 % \begin{flushright}

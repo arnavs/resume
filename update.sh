@@ -2,7 +2,8 @@
 # Update website.
 commit_date=$(date '+%b %d %y, %H:%M:%S')
 
-xelatex sood-cv.tex
-git add -u
+xelatex sood-resume.tex
+xelatex sood-cv_full.tex
+git add -
 git commit -m "Update ${commit_date}"
 git push

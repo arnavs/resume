@@ -15,7 +15,7 @@
 \usepackage{url}
 \usepackage{listings}
 \usepackage{datetime}
-\usepackage[top=0.75in, bottom=1cm, left=4cm, right=3cm, heightrounded, marginparwidth=2.5cm, marginparsep=5mm]{geometry}
+\usepackage[top=1in, bottom=1in, left=4cm, right=3cm, heightrounded, marginparwidth=2.5cm, marginparsep=5mm]{geometry}
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
 
@@ -25,14 +25,13 @@
 %\usepackage[varqu,varl]{inconsolata} % tt
 %\usepackage{amsmath}
 %\usepackage[bigdelims]{newpxmath}
-\usepackage[T1]{fontenc}
+% \usepackage[T1]{fontenc} obsolete?
 \usepackage{textcomp}
 \usepackage{fontspec}
 \defaultfontfeatures{
-Path = /usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fontawesome5/ }
+Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \usepackage{fontawesome5}
 \usepackage[default,opentype]{sourcesanspro}
-\usepackage{fancyhdr}
 
 \definecolor{darkred}{rgb}{0.68,0.10,0.10}
 
@@ -62,8 +61,8 @@ Path = /usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \def\mybibliocommand{}
 \def\mysubtitle{}
 \def\myemail{arnav@arnavsood.com}
-\def\myweb{https://arnavsood.com}
-\def\mygit{https://github.com/arnavs}
+\def\myweb{arnavsood.com}
+\def\mygit{arnavs}
 \def\myphone{(+1) 609 285 7001}
 \def\myaffiliation{University of British Columbia}
 % \def\myuni{B.A. Math (NYU)}
@@ -83,16 +82,19 @@ Path = /usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \hyphenation{Clau-dius}
 
 \rhead{
-  \fontfamily{SourceSansPro-LF}\selectfont
+  % \fontfamily{SourceSansPro-LF}\selectfont obsolete
   \flushright \small
   ~ \\
   % \myphone ~~ \faPhone \\
- {\small  \texttt{\href{mailto:\myemail}{\myemail}} ~~\faEnvelope} \\
- {\small  \texttt{\href{\myweb}{arnavsood.com}} ~~\faGlobe} \\
- {\small  \texttt{\href{\mygit}{arnavs}} ~~\faGit} \\
- {\small  US citizen ~~\faPassport} \\ 
+ {\small  \href{mailto:\myemail}{\texttt{\myemail}} ~~\faEnvelope} \\
+ {\small  \href{https://\myweb}{\texttt{\myweb}} ~~\faGlobe} \\
+ {\small  \href{https://github.com/\mygit}{\texttt{\mygit}} ~~\faGit} \\
+ {\small  US citizen, Canada PR ~~\faPassport} \\ 
 }
-\lhead{}
+\lhead{ {\small  Compiled \today} \\ 
+\hspace{1 em} \\ 
+\hspace{1 em} \\ }
+% \setlength\headheight{50pt}
 \renewcommand{\headrulewidth}{0pt}
 
 %%%------------------------------------------------------------------------
@@ -143,6 +145,7 @@ Path = /usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \hfill
 
 %% Name
+\vspace{0.25in}
 \noindent{\LARGE \so{\textsc{arnav sood}}}  
 \reversemarginpar
 % \bigskip
@@ -165,9 +168,10 @@ Path = /usr/local/texlive/2020/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \marginhead{{\vskip1.2em} \textsf{overview}}
 \setlength{\leftskip}{0cm}
 \setlength{\parindent}{1cm}
-I am a researcher and programmer working in computational economics. My projects include \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{codebases} for academic papers, open-source \href{https://github.com/QuantEcon/InstantiateFromURL.jl}{software packages}, and \href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{lectures}. \\
 
-I have extensive experience with differential equations, Julia, and PyTorch. The latter includes logging frameworks, model debugging, execution on cloud instances like Amazon EC2, and additional tools like PyTorch Lightning.
+I am a first-year economics Ph.D. student at Carnegie Mellon University (Tepper School.) My general interests are in computational macroeconomics, and especially high-dimensional models with heterogeneity in information. \\
+
+Besides journal articles, my projects include open-source \href{https://github.com/QuantEcon/Expectations.jl}{software packages}, \href{https://julia.quantecon.org}{lectures}, and \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{codebases} for academic papers.
 
 {\vskip 1em}
 \bigskip
@@ -176,15 +180,6 @@ I have extensive experience with differential equations, Julia, and PyTorch. The
 %% Appointments/Positions
 % \medskip
 \marginhead{\vskip1em employment \\ affiliations}
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{Consulting Researcher/Programmer} \hfill June 2020 --- Present \\
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-\noindent Clients Include: UBC, QuantEcon
-\vspace{0.1in} 
-
 \setlength{\leftskip}{0cm}
 
 \noindent \textbf{University of British Columbia} \hfill June 2018 --- June 2020 \\
@@ -198,7 +193,7 @@ Member of \href{https://caida.ubc.ca/faculty-members-caida}{Centre for Artificia
 
 \setlength{\leftskip}{0cm}
 
-\noindent \textbf{QuantEcon} \hfill{Jan. 2019 --- Present} \\
+\noindent \textbf{QuantEcon} \hfill{January 2019 --- Present} \\
 
 \setlength{\leftskip}{1cm}
 \vspace{-0.15in}
@@ -210,7 +205,17 @@ Member of \href{https://caida.ubc.ca/faculty-members-caida}{Centre for Artificia
 
 %% Education
 \setlength{\leftskip}{0cm}
-\marginhead{\vskip1.1em education}
+\marginhead{\vskip0.9em education}
+
+\noindent Tepper School of Business, \textbf{Carnegie Mellon University} \\
+
+\setlength{\leftskip}{1cm}
+\vspace{-0.15in}
+
+\noindent Ph.D. Economics, August 2021 --- Present \vspace{0.1in}
+
+\setlength{\leftskip}{0cm}
+
 
 \noindent \textbf{University of British Columbia} \\
 
@@ -226,28 +231,37 @@ Member of \href{https://caida.ubc.ca/faculty-members-caida}{Centre for Artificia
 \setlength{\leftskip}{1cm}
 \vspace{-0.15in}
 
-\noindent  B.A. Mathematics, 2018 \\ Minors in Economics, Philosophy 
+\noindent  B.A. Mathematics, 2018 \\ Minors in Economics, Philosophy % \vspace{0.1in}
 
+\setlength{\leftskip}{0cm}
+
+% \noindent \textbf{West Windsor - Plainsboro HS South}  \\
+
+% \setlength{\leftskip}{1cm}
+% \vspace{-0.15in}
+
+% \noindent  NJ Governor's School of Engineering and Technology \\ Dual-Enrolled Mathematics Student, Princeton University
 
 {\vskip 1em}
 \bigskip
 
 
 %% Publications and Projects
-\marginhead{\vskip1em publications}
+\marginhead{\vskip0.9em papers}
 \setlength{\leftskip}{0cm}
 
-\noindent \textbf{Exploiting Symmetry in High-Dimensional Dynamic Programming} \hfill{w. coauthors}\\
+\noindent \textbf{\href{https://www.nber.org/papers/w28981}{Exploiting Symmetry in High-Dimensional Dynamic Programming}} \hfill{NBER WP}\\
 
 \setlength{\leftskip}{1cm}
 \vspace{-0.15in}
-Uses PyTorch to accelerate the solution of economic models, by embedding economic facts in the neural approximator 
+Uses permutation invariance and concentration of measure to solve high-dimensional DP problems. \\
+\indent With Mahdi Ebrahimi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde, Jesse Perla
 \setlength{\leftskip}{0cm}
 
 {\vskip 1em}
 \bigskip
 
-\marginhead{\vskip1em software}
+\marginhead{\vskip0.9em software}
 \setlength{\leftskip}{0cm}
 
 \noindent \textbf{\href{https://github.com/QuantEcon/expectations.jl}{Expectations.jl}} \hfill{\href{https://live.juliacon.org/uploads/posters/N9CXCT.pdf}{Poster} from JuliaCon 2020} \\
@@ -275,7 +289,7 @@ Various package utilities
 {\vskip 1em}
 \bigskip
 
-\marginhead{\vskip1em other writing}
+\marginhead{\vskip0.5em other writing}
 \setlength{\leftskip}{0cm}
 
 \noindent \textbf{\href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}} \hfill with Jesse Perla \\ 
@@ -315,6 +329,9 @@ Causes and effects of cognitive constraints \\
 \setlength{\leftskip}{0cm}
 \marginhead{\vskip1.1em activities}
 
+\pagestyle{plain}
+
+
 \noindent \textbf{Free Geek Vancouver} \hfill{Volunteer Tech Support} \vspace{0.1in}
 
 \noindent \textbf{Splash!}, Various Universities \hfill{Volunteer Teacher} \\ 
@@ -326,7 +343,6 @@ Taught free one-hour classes to high-school students  \\
 \setlength{\leftskip}{0cm}
 
 
-% \noindent \textbf{Splash!}, Various Universities \hfill{Volunteer Teacher} \\ 
 
 \setlength{\leftskip}{1cm}
 \vspace{-0.15in}
@@ -334,10 +350,12 @@ Taught free one-hour classes to high-school students  \\
 {\vskip 1em}
 \bigskip
 
+\setlength{\leftskip}{0cm}
+\marginhead{\vskip1.1em honors \\ awards}
 
-% \bigskip
-% \begin{flushright}
-% \hfill Generated \monthyeardate\today
-% \end{flushright}
+\noindent William Larimer Mellon Fellowship \vspace{0.1in}
+
+\noindent National Merit Scholarship Competition (Finalist)
+
 
 \end{document}

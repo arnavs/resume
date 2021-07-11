@@ -4,15 +4,10 @@
 %%% Borrowed from Kieran Healy <kjhealy@gmail.com> and Simon Munzert <munzert@hertie-school.org>
 %%% Most recent version is at http://kjhealy.github.com/kjh-vita
 
-%%% Because this is a hand-tweaked file, be on the look out for \medksip, \hspace
-%%% \bigskip and \newpage commands here and there, which are used to balance
-%%% the layout or avoid widows & orphans, etc. You should of course add or
-%%% remove these as needed.
-%%%------------------------------------------------------------------------
-
-\documentclass[11pt,article,oneside]{memoir}   % based on locally stored memoir-article-styles.sty
+\documentclass[10pt,article,oneside]{memoir}   % based on locally stored memoir-article-styles.sty
 \usepackage{org-preamble-xelatex} % based on locally stored org-preamble-xelatex.sty
 \usepackage{url}
+\usepackage{amssymb}
 \usepackage{listings}
 \usepackage{datetime}
 \usepackage[top=1in, bottom=1in, left=4cm, right=3cm, heightrounded, marginparwidth=2.5cm, marginparsep=5mm]{geometry}
@@ -20,18 +15,14 @@
   \monthname[\THEMONTH], \THEYEAR}
 
 % ------ fonts ------%
-%\usepackage{newpxtext}
-%\usepackage[scaled=.97]{cabin} %ss
-%\usepackage[varqu,varl]{inconsolata} % tt
-%\usepackage{amsmath}
-%\usepackage[bigdelims]{newpxmath}
-% \usepackage[T1]{fontenc} obsolete?
 \usepackage{textcomp}
 \usepackage{fontspec}
 \defaultfontfeatures{
 Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \usepackage{fontawesome5}
-\usepackage[default,opentype]{sourcesanspro}
+\usepackage{crimson}
+\usepackage{enumitem}% http://ctan.org/pkg/enumitem
+\setlist[itemize]{noitemsep, topsep=0in}
 
 \definecolor{darkred}{rgb}{0.68,0.10,0.10}
 
@@ -69,7 +60,7 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 % \def\myoffice{053 Iona Building}
 \date{\today}
 \def\mykeywords{Arnav, Sood, Arnav Sood, Vita, CV, Resume, Economics}
-%\setlength{\parskip}{1em}
+% \setlength{\parskip}{1em}
 
 \usepackage{hyphenat}
 %\setlength{\emergencystretch}{10pt}
@@ -101,40 +92,15 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 %%% Document
 %%%------------------------------------------------------------------------
 \begin{document}
-%%%------------------------------------------------------------------------
-%%% Local commands
-%%%------------------------------------------------------------------------
 
-%% Marginal header
-%% Note: as the document goes on you may need to introduce a (gradually increasing)
-%% \vspace element to keep the marginal header pleasingly aligned with the first
-%% item in the body text. Like this: \marginhead{{\vskip 0.4em}Grants}, or
-%% \marginhead{{\vskip 0.8em}Service}. Experiment as needed.
 \newcommand{\marginhead}[1]{\marginpar{{\flushleft \footnotesize\vspace{-1em} \textsf{\textcolor{darkred}{#1}}}}}
-
-
-%% [optional] custom ampersand (font consistent with the one chosen above)
-% \newcommand{\amper}{{\fontspec[Scale=.95,Colour=AA0000]{Minion Pro Medium}\selectfont\&\,}}
-
 %% No bullets on labels
 \renewcommand{\labelitemi}{~}
 
-%% Custom hanging indent for vita items
-%\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
-%\def\ind{\hangindent=18pt\hangafter=1 \noindent}
-\def\labelitemi{~}
-\renewcommand{\labelitemii}{~}
 
 %%%------------------------------------------------------------------------
 %%% Page layout
 %%%------------------------------------------------------------------------
-
-% These lines will insert git revision info in the footer, using the vc
-% package---see docs for vc package for details. Comment out this line
-% if you're not using vc, and also remove the \input{vc} line above.
-%\pagestyle{kjh}
-%\thispagestyle{kjhgit}
-
 
 % \pagestyle{empty}
 \pagestyle{fancy}
@@ -146,216 +112,132 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 
 %% Name
 \vspace{0.4in}
-\noindent{\LARGE \so{\textsc{arnav sood}}}  
+\noindent{\LARGE \textbf{ARNAV SOOD}}  
 \reversemarginpar
-% \bigskip
-
-% \medskip
-
-% %% Personal info
-% \marginhead{{\vskip1.2em} \textsf{personal \\ information}}
-% \setlength{\leftskip}{1cm}
-
-% \noindent Immigration: US citizen
-
-% \noindent Date of Birth: July 1996
-
-% \noindent Degree: B.A. Math (NYU)
 
 {\vskip 1em}
 \bigskip
 
-\marginhead{{\vskip1.2em} \textsf{overview}}
-\setlength{\leftskip}{0cm}
+%% Overview
+\marginhead{\textsf{overview}}
 \setlength{\parindent}{1cm}
 
-I am a first-year economics Ph.D. student at Carnegie Mellon University (Tepper Business School.) My general interests are in computational macroeconomics, and especially high-dimensional models with heterogeneity in information. \\
-
-Besides journal articles, my projects include open-source \href{https://github.com/QuantEcon/Expectations.jl}{software packages}, \href{https://julia.quantecon.org}{lectures}, and \href{https://github.com/jlperla/PerlaTonettiWaugh.jl}{codebases} for academic papers.
+I am a first-year economics Ph.D. student at Carnegie Mellon University (Tepper School of Business.) My general interests are in computational macroeconomics, and especially high-dimensional models with heterogeneity in information. 
 
 {\vskip 1em}
 \bigskip
 
-
-%% Appointments/Positions
-% \medskip
-\marginhead{\vskip1em employment \\ affiliations}
+%% Employment
+\marginhead{employment}
 \setlength{\leftskip}{0cm}
 
-\noindent \textbf{University of British Columbia} \hfill June 2018 --- June 2020 \\
+Predoctoral Fellow, Univeristy of British Columbia, 2018--2020.
+\begin{itemize}
+  \setlength{\leftskip}{1cm} \item ${\color{darkred} \blacktriangleright}$ Supervised by \href{https://jesseperla.com}{Jesse Perla}. Member of \href{https://caida.ubc.ca/faculty-members-caida}{CAIDA}. 
+\end{itemize} \vspace{0.1in} 
 
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-\noindent Predoctoral Fellow, supervised by \href{https://jesseperla.com}{Jesse Perla} \\ 
-Guest Lecturer  \\ 
-Member of \href{https://caida.ubc.ca/faculty-members-caida}{Centre for Artificial Intelligence Design and Action}
-\vspace{0.1in} 
-
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{QuantEcon} \hfill{January 2019 --- Present} \\
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-\noindent Lead Developer \\ 
-\noindent Worked on lecture content, open-source packages, and infrastructure
+Lead Developer, QuantEcon, 2019--. 
 
 {\vskip 1em}
 \bigskip
 
 %% Education
 \setlength{\leftskip}{0cm}
-\marginhead{\vskip0.9em education}
+\marginhead{education}
 
-\noindent \textbf{Carnegie Mellon University} \\
+\emph{(In-Progress) Ph.D. Economics, Carnegie Mellon University}. \vspace{0.1in}
 
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
+B.A. Mathematics, New York University, 2018.
 
-\noindent Ph.D. Economics, August 2021 --- Present \vspace{0.1in}
-
-\setlength{\leftskip}{0cm}
-
-
-\noindent \textbf{University of British Columbia} \\
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-
-\noindent Economics Courses, June 2018 --- June 2020 \vspace{0.1in}
+{\vskip 1em}
+\bigskip
 
 \setlength{\leftskip}{0cm}
+\marginhead{working papers}
 
-\noindent \textbf{New York University}  \\
+\textbf{\href{https://www.nber.org/papers/w28981}{Exploiting Symmetry in High-Dimensional Dynamic Programming}}. \hfill NBER
+\begin{itemize}
+  \setlength{\leftskip}{1cm} \item  With Mahdi Ebrahimi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde, Jesse Perla.
+  \item \emph{Presented}: Minnesota Macro Conference (Minneapolis MN, August 2--4, 2021); VSE Econometrics Lunch (Vancouver BC, April 16, 2021); VSE Lunch Seminar (Vancouver BC, December 1, 2020)
+\end{itemize} 
 
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-
-\noindent  B.A. Mathematics, 2018 \\ Minors in Economics, Philosophy % \vspace{0.1in}
+{\vskip 1em}
+\bigskip
 
 \setlength{\leftskip}{0cm}
+\marginhead{software}
 
-% \noindent \textbf{West Windsor - Plainsboro HS South}  \\
+\textbf{\href{https://github.com/QuantEcon/expectations.jl}{Expectations.jl}}  
+\begin{itemize}
+  \setlength{\leftskip}{1cm} \item  Efficient expectation operators for univariate distributions, using Gaussian quadrature. 
+  \item \emph{Presented}: \href{https://live.juliacon.org/uploads/posters/N9CXCT.pdf}{JuliaCon 2020} (Virtual, July 29--31, 2020) 
+\end{itemize} \vspace{0.1in}
+
+\textbf{\href{https://github.com/QuantEcon/InstantiateFromURL.jl}{InstantiateFromURL.jl}}  
+\begin{itemize}
+  \setlength{\leftskip}{1cm} \item  Allows Julia notebooks to refer to online, versioned dependency information. 
+  \item \emph{Presented}: \href{https://live.juliacon.org/talk/87JCMX}{JuliaCon 2020} (Virtual, July 29--31, 2020) 
+\end{itemize} 
+
+{\vskip 1em}
+\bigskip
+
+\marginhead{other writing}
+\setlength{\leftskip}{0cm}
+
+\textbf{\href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}}. \hfill QuantEcon Notes
+\begin{itemize}
+  \setlength{\leftskip}{1cm} \item  With Jesse Perla. \href{https://quantecon.github.io/SimpleDifferentialOperators.jl/v0.4/generated/LCP_advanced.html}{Computational Appendix}.
+\end{itemize} \vspace{0.1in}
+
+
+\textbf{\href{https://dailysciencefiction.com/science-fiction/other-worlds-sf/arnav-sood/local-perturbation}{Local Perturbation}}.  \hfill Daily Science Fiction
+\begin{itemize}
+  \setlength{\leftskip}{1cm} \item  Applied comparative statics. 
+\end{itemize} \vspace{0.1in}
+
+
+\textbf{\href{https://dailysciencefiction.com/fantasy/fantasy/arnav-sood/customer-feedback-secondhand-alchemical-goods}{Customer Feedback (Secondhand Alchemical Goods)}}. \hfill Daily Science Fiction
+\begin{itemize}
+  \setlength{\leftskip}{1cm} \item  Discussion of various transmutation schemes.  \href{https://microverses.net/archives/250}{Microverses Review}.
+\end{itemize} \vspace{0.1in}
+
+
+\textbf{\href{http://blanketsea.com/2019/09/18/bounded-rationality-by-arnav-sood/}{Bounded Rationality}}. \hfill Blanket Sea
+\begin{itemize}
+  \setlength{\leftskip}{1cm} \item  Causes and effects of cognitive constraints. Pushcart Prize nominee.
+\end{itemize} \vspace{0.1in}
+
+{\vskip 1em}
+\bigskip
+
+
+\setlength{\leftskip}{0cm}
+\marginhead{activities}
+
+Volunteer Tech Support, Free Geek Vancouver \vspace{0.1in}
+
+Volunteer Teacher, Splash! (Various Universities)
+\begin{itemize}
+  \setlength{\leftskip}{1cm}\item ${\color{darkred} \blacktriangleright}$ Taught free one-hour classes to high-school students. Subjects included information economics, statistics, abstract algebra, philosophy of mind, and Play-Doh. \vspace{0.1in}
+\end{itemize} 
+
+
+
 
 % \setlength{\leftskip}{1cm}
 % \vspace{-0.15in}
 
-% \noindent  NJ Governor's School of Engineering and Technology \\ Dual-Enrolled Mathematics Student, Princeton University
+% {\vskip 1em}
+% \bigskip
 
-{\vskip 1em}
-\bigskip
+% \setlength{\leftskip}{0cm}
+% \marginhead{\vskip1.1em honors \\ awards}
 
+% \noindent William Larimer Mellon Fellowship \vspace{0.1in}
 
-%% Publications and Projects
-\marginhead{\vskip0.9em papers}
-\setlength{\leftskip}{0cm}
+% \noindent National Merit Scholarship Competition (Finalist)
 
-\noindent \textbf{\href{https://www.nber.org/papers/w28981}{Exploiting Symmetry in High-Dimensional Dynamic Programming}} \hfill{NBER WP}\\
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-Uses permutation invariance and concentration of measure to solve high-dimensional DP problems. \\
-\indent With Mahdi Ebrahimi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde, Jesse Perla
-\setlength{\leftskip}{0cm}
-
-{\vskip 1em}
-\bigskip
-
-\marginhead{\vskip0.9em software}
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{\href{https://github.com/QuantEcon/expectations.jl}{Expectations.jl}} \hfill{\href{https://live.juliacon.org/uploads/posters/N9CXCT.pdf}{Poster} from JuliaCon 2020} \\
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-Provides efficient expectation operators for univariate distributions, using Gaussian quadrature \vspace{0.1in}
-\setlength{\leftskip}{0cm}
-
-
-\noindent \textbf{\href{https://github.com/QuantEcon/InstantiateFromURL.jl}{InstantiateFromURL.jl}} \hfill \href{https://live.juliacon.org/talk/87JCMX}{Talk} from JuliaCon 2020 \\ 
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-Allows Julia notebooks to refer to online dependency information, boosting reproducibility/mobility \vspace{0.1in}
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{\href{https://github.com/arnavs/PkgUtils.jl}{PkgUtils.jl}}  \\ 
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-Various package utilities
-\setlength{\leftskip}{0cm}
-
-{\vskip 1em}
-\bigskip
-
-\marginhead{\vskip0.5em other writing}
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{\href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}} \hfill with Jesse Perla \\ 
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-Demonstrates how optimal stopping problems can be solved more efficiently as LCPs than as a free-boundary problem \\ 
-\hspace*{1cm} \href{https://quantecon.github.io/SimpleDifferentialOperators.jl/v0.4/generated/LCP_advanced.html}{Computational Appendix} \vspace{0.1in}
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{\href{https://dailysciencefiction.com/science-fiction/other-worlds-sf/arnav-sood/local-perturbation}{Local Perturbation}} \hfill Daily Science Fiction \\ 
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-Applied comparative statics \vspace{0.1in}
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{\href{https://dailysciencefiction.com/fantasy/fantasy/arnav-sood/customer-feedback-secondhand-alchemical-goods}{Customer Feedback (Secondhand Alchemical Goods)}} \hfill Daily Science Fiction \\ 
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-Discussion of various transmutation schemes \\ 
-\hspace*{1cm}\href{https://microverses.net/archives/250}{Review} \vspace{0.1in}
-\setlength{\leftskip}{0cm}
-
-\noindent \textbf{\href{http://blanketsea.com/2019/09/18/bounded-rationality-by-arnav-sood/}{Bounded Rationality}} \hfill Blanket Sea \\ 
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-Causes and effects of cognitive constraints \\ 
-\hspace*{1cm}Pushcart Prize nominee 
-\setlength{\leftskip}{0cm}
-
-{\vskip 1em}
-\bigskip
-
-\setlength{\leftskip}{0cm}
-\marginhead{\vskip1.1em activities}
-
-\pagestyle{plain}
-
-
-\noindent \textbf{Free Geek Vancouver} \hfill{Volunteer Tech Support} \vspace{0.1in}
-
-\noindent \textbf{Splash!}, Various Universities \hfill{Volunteer Teacher} \\ 
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.13in}
-Taught free one-hour classes to high-school students  \\ 
-\hspace*{1cm}Subjects included information economics, statistics, abstract algebra, philosophy of mind, and Play-Doh \vspace{0.1in}
-\setlength{\leftskip}{0cm}
-
-
-
-\setlength{\leftskip}{1cm}
-\vspace{-0.15in}
-
-{\vskip 1em}
-\bigskip
-
-\setlength{\leftskip}{0cm}
-\marginhead{\vskip1.1em honors \\ awards}
-
-\noindent William Larimer Mellon Fellowship \vspace{0.1in}
-
-\noindent National Merit Scholarship Competition (Finalist)
 
 
 \end{document}

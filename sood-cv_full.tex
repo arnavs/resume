@@ -1,110 +1,33 @@
-% !TEX program = xelatex
 
-%%% A template to produce a nice-looking Curriculum Vitae.
-%%% Borrowed from Kieran Healy <kjhealy@gmail.com> and Simon Munzert <munzert@hertie-school.org>
-%%% Most recent version is at http://kjhealy.github.com/kjh-vita
-
-\documentclass[12pt,article,oneside]{memoir}   % based on locally stored memoir-article-styles.sty
-\usepackage{org-preamble-xelatex} % based on locally stored org-preamble-xelatex.sty
+\documentclass[12pt,article,oneside]{article}   % based on locally stored memoir-article-styles.sty
 \usepackage{url}
-\usepackage{amssymb}
-\usepackage{listings}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{xcolor, hyperref}
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}\usepackage{listings}
 \usepackage{datetime}
-\usepackage[top=0.5in, bottom=1in, left=4cm, right=3cm, heightrounded, marginparwidth=2.5cm, marginparsep=5mm]{geometry}
-\newdateformat{monthyeardate}{%
-  \monthname[\THEMONTH], \THEYEAR}
-
-% ------ fonts ------%
-\usepackage{textcomp}
 \usepackage{fontspec}
-\defaultfontfeatures{
-Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
-\usepackage{fontawesome5}
-\usepackage{crimson}
-\usepackage{enumitem}% http://ctan.org/pkg/enumitem
-\setlist[itemize]{noitemsep, topsep=0in}
+\setmainfont{Times New Roman}
+\usepackage{datetime}
 
-
-\definecolor{darkred}{rgb}{0.68,0.10,0.10}
-
-\usepackage{soul}
-
-%% Custom hanging indent for vita items
-\def\mybibind{\vspace{0.1in} \noindent \hangindent=1 true cm\hangafter=1}
-
-
-% penalize stuff
-\clubpenalty = 10000      % Schusterjungen
-\widowpenalty = 10000          % Hurenkinder
-\displaywidowpenalty = 10000   % Hurenkinder
-
-% header
-\usepackage{fancyhdr}
-\pagenumbering{gobble}
-
-%%%------------------------------------------------------------------------
-%%% Metadata
-%%%------------------------------------------------------------------------
-\def\myauthor{Arnav Sood}
-\def\mytitle{Vita}
-\def\mycopyright{\myauthor}
-\def\mykeywords{}
-\def\mybibliostyle{plain}
-\def\mybibliocommand{}
-\def\mysubtitle{}
-\def\myemail{arnavs@cmu.edu}
-\def\myweb{arnavsood.com}
-\def\mygit{arnavs}
-\def\myphone{(+1) 609 285 7001}
-\def\myaffiliation{University of British Columbia}
-% \def\myuni{B.A. Math (NYU)}
-% \def\myoffice{053 Iona Building}
-\date{\today}
-\def\mykeywords{Arnav, Sood, Arnav Sood, Vita, CV, Resume, Economics}
-% \setlength{\parskip}{1em}
-
-\usepackage{hyphenat}
-%\setlength{\emergencystretch}{10pt}
-\hyphenation{Bun-des-tags-wah-len}
-\hyphenation{Wahl-kreis-ebe-ne}
-\hyphenation{Con-sti-tu-ents}
-\hyphenation{Kan-di-da-ten-be-ur-tei-lung}
-\hyphenation{Mann-heim}
-\hyphenation{ge-winnt}
-\hyphenation{Clau-dius}
-\usepackage{datetime2}
-\usepackage{marginnote}
-% \DTMlangsetup{showdayofmonth=false}
-
-
-
-
-% \setlength\headheight{50pt}
-\renewcommand{\headrulewidth}{0pt}
-
-%%%------------------------------------------------------------------------
-%%% Document
-%%%------------------------------------------------------------------------
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+\usepackage[top=0.5in, bottom=1in, left=1cm, right=3cm]{geometry}
+\usepackage{enumitem}
+\setitemize{itemsep=1pt}
 \begin{document}
 
-\newcommand{\marginhead}[1]{\marginpar{{\flushleft \footnotesize \vspace{0.06in} \textsf{\textcolor{darkred}{#1}}}}}
 %% No bullets on labels
 \renewcommand{\labelitemi}{~}
 
-\pagestyle{empty}
-\reversemarginpar
-\hspace*{-3.7cm}{\huge \textbf{Arnav Sood}} \vspace{0.1 in} \hfill \today \\ 
-\hspace*{-3.05 cm}{Ph.D. Student in Economics, Carnegie Mellon University}
+\flushleft {\huge \textbf{Arnav Sood}} \hfill \monthyeardate\today \\
+\flushleft Ph.D. Student in Economics, Carnegie Mellon University
 
-% \pagestyle{empty}
-% {\huge{\textbf{Arnav Sood}}}
-
-{\vskip 0.1in}
-\bigskip
-
-\marginhead{\textsf{personal}}
-\setlength{\parindent}{1cm}
-\vspace*{-0.04in}
+\subsubsection*{Personal}
 \begin{itemize}
   \item Office: Tepper Quad 4218B, 4765 Forbes Ave., Pittsburgh 15213
   \item Email: \href{mailto:arnavs@cmu.edu}{\texttt{arnavs@cmu.edu}}
@@ -112,147 +35,48 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
   \item Citizenship: US Citizen, Canada PR
 \end{itemize}
 
-{\vskip 0.1in}
-\bigskip
-
-%% Overview
-\marginhead{\textsf{interests}}
-\setlength{\parindent}{1cm}
-
-Macroeconomics, Computational Economics, Computational Econometrics
-
-{\vskip 0.1in}
-\bigskip
-
-\setlength{\leftskip}{0cm}
-\marginhead{education}
-
-\emph{(In-Progress) Ph.D. Economics, Carnegie Mellon University} \vspace{0.1in}
-
-B.A. Mathematics, New York University \hfill 2018
-
-% Economics Coursework, University of British Columbia, 2018--2020. 
-
-{\vskip 0.1in}
-\bigskip
-
-%% Employment
-\marginhead{employment}
-\setlength{\leftskip}{0cm}
-
-Predoctoral Fellow, Univeristy of British Columbia \hfill 2018--2020\vspace{0.1in} 
-
-Lead Developer, QuantEcon \hfill 2019--2020\vspace{0.1in}
-
-Prior Experience \hfill 2014--2018
-\begin{itemize}\setlength{\leftskip}{1cm}
-  \item Research Assistant to Laura Veldkamp
-  \item Economics Research Intern, Office of the Comptroller of the Currency
-  \item Intern, Morgan Stanley Bank, N.A.
-\end{itemize}
-
-{\vskip 0.1in}
-\bigskip
-
-%% Education
-
-\setlength{\leftskip}{0cm}
-\marginhead{working papers}
-
-\textbf{\href{https://www.nber.org/papers/w28981}{Exploiting Symmetry in High-Dimensional Dynamic Programming}}. 
+\subsubsection*{Interests}
 \begin{itemize}
-  \setlength{\leftskip}{1cm} \item  With Mahdi Ebrahimi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde, Jesse Perla.
-  \item NBER Working Paper.
+  \item Macroeconomics, Computational Economics, Computational Econometrics
 \end{itemize} 
 
-{\vskip 0.1in}
-\bigskip
-
-\setlength{\leftskip}{0cm}
-\marginhead{software}
-
-\textbf{\href{https://github.com/QuantEcon/expectations.jl}{Expectations.jl}}  \vspace{0.1in}
-
-\textbf{\href{https://github.com/QuantEcon/InstantiateFromURL.jl}{InstantiateFromURL.jl}}  
-
-{\vskip 0.1in}
-\bigskip
-
-\marginhead{other writing}
-\setlength{\leftskip}{0cm}
-
-\textbf{\href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}}. 
+\subsubsection*{Education}
 \begin{itemize}
-  \setlength{\leftskip}{1cm} \item  With Jesse Perla. \href{https://quantecon.github.io/SimpleDifferentialOperators.jl/v0.4/generated/LCP_advanced.html}{Computational Appendix}.
-\end{itemize} \vspace{0.1in}
+  \item \textit{(In-Progress) Ph.D. Economics, Carnegie Mellon University} 
+  \item B.A. Mathematics, New York University \hfill 2018
+\end{itemize} 
 
-% \textbf{\href{https://dailysciencefiction.com/science-fiction/other-worlds-sf/arnav-sood/local-perturbation}{Local Perturbation}}.  \hfill Daily Science Fiction
-% \begin{itemize}
-%   \setlength{\leftskip}{1cm} \item  Applied comparative statics. 
-% \end{itemize} \vspace{0.1in}
-
-
-\textbf{\href{https://dailysciencefiction.com/fantasy/fantasy/arnav-sood/customer-feedback-secondhand-alchemical-goods}{Customer Feedback (Secondhand Alchemical Goods)}}. 
+\subsubsection*{Employment}
 \begin{itemize}
-  \setlength{\leftskip}{1cm} \item  \href{https://microverses.net/archives/250}{Microverses Review}.
+  \item Predoctoral Fellow, Univeristy of British Columbia \hfill 2018--2020
+  \item Lead Developer, QuantEcon \hfill 2019--2020
+  \item Prior Experience \hfill 2014--2018 
+  \begin{itemize}\setlength{\leftskip}{1cm}
+    \item Research Assistant to Laura Veldkamp
+    \item Economics Research Intern, Office of the Comptroller of the Currency
+    \item Intern, Morgan Stanley Bank, N.A.
+  \end{itemize}
 \end{itemize}
 
+\subsubsection*{Working Papers}
+\begin{itemize}
+  \item ``Exploiting Symmetry in High-Dimensional Dynamic Programming.'' (With Mahdi Ebrahimi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde, Jesse Perla)
+\end{itemize}
 
-{\vskip 0.1in}
-\bigskip
+\subsubsection*{Software}
+\begin{itemize}
+  \item \href{https://github.com/QuantEcon/Expectations.jl}{\texttt{Expectations.jl}}: Expectation operators for distribution objects using Gaussian quadrature.
+  \item \href{https://github.com/QuantEcon/InstantiateFromURL.jl}{\texttt{InstantiateFromURL.jl}}: Bind Jupyter notebooks to web-hosted dependency TOML.
+\end{itemize}
 
-\setlength{\leftskip}{0cm}
-\marginhead{grants and \\ awards}
-
-William Larimer Mellon Fellowship, CMU \hfill 2021\vspace{0.1in}
-
-Presidential Honors Scholar, NYU \hfill 2014\vspace{0.1 in}
-
-National Merit Scholar Finalist \hfill 2014
-
-{\vskip 0.1in}
-\bigskip
-
-\setlength{\leftskip}{0cm}
-\marginhead{talks, panels and \\ presentations}
-
-2020: JuliaCon \vspace{0.1in}
-
-2022: ASSA ``What Can AI Do in Economics?''
-
-{\vskip 0.1in}
-\bigskip
-
-% \newpage
-% \thispagestyle{empty}
-
-\setlength{\leftskip}{0cm}
-\marginhead{teaching}
-
-Guest Lecturer, UBC \hfill 2018--2020
-
-{\vskip 0.1in}
-\bigskip
-
-% \setlength{\leftskip}{0cm}
-% \marginhead{invited meetings}
-
-% 2022: NBER Student Workshop on Heterogeneous-Agent Macro 
-
-% {\vskip 0.1in}
-% \bigskip
-
-
-\setlength{\leftskip}{0cm}
-\marginhead{activities}
-
-Volunteer Tech Support, Free Geek Vancouver \vspace{0.1in}
-
-Volunteer Teacher, Splash! (Various Universities)
-
-
-
-
+\subsubsection*{Other Writing}
+\begin{itemize}
+  \item \href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}. (With Jesse Perla.) QuantEcon Notes.
+  \begin{itemize}
+    \item \href{https://quantecon.github.io/SimpleDifferentialOperators.jl/v0.4/generated/LCP_advanced.html}{Computational Appendix}.
+  \end{itemize}
+  \item \href{https://dailysciencefiction.com/fantasy/fantasy/arnav-sood/customer-feedback-secondhand-alchemical-goods}{Customer Feedback (Secondhand Alchemical Goods)}. Daily Science Fiction.
+\end{itemize}
 
 
 \end{document}

@@ -10,7 +10,7 @@
 \usepackage{amssymb}
 \usepackage{listings}
 \usepackage{datetime}
-\usepackage[top=1in, bottom=1in, left=4cm, right=3cm, heightrounded, marginparwidth=2.5cm, marginparsep=5mm]{geometry}
+\usepackage[top=0.5in, bottom=1in, left=4cm, right=3cm, heightrounded, marginparwidth=2.5cm, marginparsep=5mm]{geometry}
 \newdateformat{monthyeardate}{%
   \monthname[\THEMONTH], \THEYEAR}
 
@@ -72,20 +72,13 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \hyphenation{Mann-heim}
 \hyphenation{ge-winnt}
 \hyphenation{Clau-dius}
+\usepackage{datetime2}
+\usepackage{marginnote}
+% \DTMlangsetup{showdayofmonth=false}
 
-\rhead{
-  % \fontfamily{SourceSansPro-LF}\selectfont obsolete
-  \flushright \small
-  ~ \\
-  % \myphone ~~ \faPhone \\
- {\small  \href{mailto:\myemail}{\texttt{\myemail}} ~~\faEnvelope} \\
- {\small  \href{https://\myweb}{\texttt{\myweb}} ~~\faGlobe} \\
- {\small  \href{https://github.com/\mygit}{\texttt{\mygit}} ~~\faGit} \\
- {\small  US citizen, Canada PR ~~\faPassport} \\ 
-}
-\lhead{ {\small \today} \\ 
-\hspace{1 em} \\ 
-\hspace{1 em} \\ }
+
+
+
 % \setlength\headheight{50pt}
 \renewcommand{\headrulewidth}{0pt}
 
@@ -98,24 +91,24 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 %% No bullets on labels
 \renewcommand{\labelitemi}{~}
 
-
-%%%------------------------------------------------------------------------
-%%% Page layout
-%%%------------------------------------------------------------------------
-
-% \pagestyle{empty}
-\pagestyle{fancy}
-
-%%%------------------------------------------------------------------------
-%%% Address and contact block
-%%%------------------------------------------------------------------------
-\hfill
-
-%% Name
-\vspace{0.4in}
-\noindent{\LARGE \textbf{ARNAV SOOD}}  
+\pagestyle{empty}
 \reversemarginpar
+\hspace*{-3.7cm}{\huge \textbf{Arnav Sood}} \vspace{0.1 in} \hfill \today
 % \pagestyle{empty}
+% {\huge{\textbf{Arnav Sood}}}
+
+{\vskip 1em}
+\bigskip
+
+\marginhead{\textsf{personal}}
+\setlength{\parindent}{1cm}
+
+\begin{itemize}
+  \item Office: Tepper Quad 4218B, 4765 Forbes Ave., Pittsburgh 15213
+  \item Email: \href{mailto:arnavs@cmu.edu}{\texttt{arnavs@cmu.edu}}
+  \item GitHub: \href{https://github.com/arnavs}{\texttt{arnavs}}
+  \item Citizenship: US Citizen, Canada PR
+\end{itemize}
 
 {\vskip 1em}
 \bigskip
@@ -129,15 +122,27 @@ Macroeconomics, Computational Economics, Computational Econometrics
 {\vskip 1em}
 \bigskip
 
+\setlength{\leftskip}{0cm}
+\marginhead{education}
+
+\emph{(In-Progress) Ph.D. Economics, Carnegie Mellon University} \vspace{0.1in}
+
+B.A. Mathematics, New York University \hfill 2018
+
+% Economics Coursework, University of British Columbia, 2018--2020. 
+
+{\vskip 1em}
+\bigskip
+
 %% Employment
 \marginhead{employment}
 \setlength{\leftskip}{0cm}
 
-Predoctoral Fellow, Univeristy of British Columbia, 2018--2020. \vspace{0.1in} 
+Predoctoral Fellow, Univeristy of British Columbia \hfill 2018--2020\vspace{0.1in} 
 
-Lead Developer, QuantEcon, 2019--2020.  \vspace{0.1in}
+Lead Developer, QuantEcon \hfill 2019--2020\vspace{0.1in}
 
-Prior Experience, 2014--2018. 
+Prior Experience \hfill 2014--2018
 \begin{itemize}\setlength{\leftskip}{1cm}
   \item Research Assistant to Laura Veldkamp
   \item Economics Research Intern, Office of the Comptroller of the Currency
@@ -148,17 +153,6 @@ Prior Experience, 2014--2018.
 \bigskip
 
 %% Education
-\setlength{\leftskip}{0cm}
-\marginhead{education}
-
-\emph{(In-Progress) Ph.D. Economics, Carnegie Mellon University}. \vspace{0.1in}
-
-B.A. Mathematics, New York University, 2018. \vspace{0.1in}
-
-Economics Coursework, University of British Columbia, 2018--2020. 
-
-{\vskip 1em}
-\bigskip
 
 \setlength{\leftskip}{0cm}
 \marginhead{working papers}
@@ -166,6 +160,7 @@ Economics Coursework, University of British Columbia, 2018--2020.
 \textbf{\href{https://www.nber.org/papers/w28981}{Exploiting Symmetry in High-Dimensional Dynamic Programming}}. 
 \begin{itemize}
   \setlength{\leftskip}{1cm} \item  With Mahdi Ebrahimi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde, Jesse Perla.
+  \item NBER Working Paper.
 \end{itemize} 
 
 {\vskip 1em}
@@ -207,11 +202,11 @@ Economics Coursework, University of British Columbia, 2018--2020.
 \setlength{\leftskip}{0cm}
 \marginhead{grants and \\ awards}
 
-William Larimer Mellon Fellowship, CMU 2021 \vspace{0.1in}
+William Larimer Mellon Fellowship, CMU \hfill 2021\vspace{0.1in}
 
-Presidential Honors Scholar, NYU 2014 \vspace{0.1 in}
+Presidential Honors Scholar, NYU \hfill 2014\vspace{0.1 in}
 
-National Merit Scholar Finalist, 2014
+National Merit Scholar Finalist \hfill 2014
 
 {\vskip 1em}
 \bigskip
@@ -226,16 +221,24 @@ National Merit Scholar Finalist, 2014
 {\vskip 1em}
 \bigskip
 
-\newpage
-\thispagestyle{empty}
+% \newpage
+% \thispagestyle{empty}
 
 \setlength{\leftskip}{0cm}
 \marginhead{teaching}
 
-Guest Lecturer, UBC \vspace{0.1in}
+Guest Lecturer, UBC \hfill 2018--2020
 
 {\vskip 1em}
 \bigskip
+
+% \setlength{\leftskip}{0cm}
+% \marginhead{invited meetings}
+
+% 2022: NBER Student Workshop on Heterogeneous-Agent Macro 
+
+% {\vskip 1em}
+% \bigskip
 
 
 \setlength{\leftskip}{0cm}
@@ -247,18 +250,6 @@ Volunteer Teacher, Splash! (Various Universities)
 
 
 
-% \setlength{\leftskip}{1cm}
-% \vspace{-0.15in}
-
-% {\vskip 1em}
-% \bigskip
-
-% \setlength{\leftskip}{0cm}
-% \marginhead{\vskip1.1em honors \\ awards}
-
-% \noindent William Larimer Mellon Fellowship \vspace{0.1in}
-
-% \noindent National Merit Scholarship Competition (Finalist)
 
 
 

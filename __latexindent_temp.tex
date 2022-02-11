@@ -4,7 +4,7 @@
 %%% Borrowed from Kieran Healy <kjhealy@gmail.com> and Simon Munzert <munzert@hertie-school.org>
 %%% Most recent version is at http://kjhealy.github.com/kjh-vita
 
-\documentclass[10pt,article,oneside]{memoir}   % based on locally stored memoir-article-styles.sty
+\documentclass[12pt,article,oneside]{memoir}   % based on locally stored memoir-article-styles.sty
 \usepackage{org-preamble-xelatex} % based on locally stored org-preamble-xelatex.sty
 \usepackage{url}
 \usepackage{amssymb}
@@ -23,6 +23,7 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \usepackage{crimson}
 \usepackage{enumitem}% http://ctan.org/pkg/enumitem
 \setlist[itemize]{noitemsep, topsep=0in}
+
 
 \definecolor{darkred}{rgb}{0.68,0.10,0.10}
 
@@ -51,7 +52,7 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \def\mybibliostyle{plain}
 \def\mybibliocommand{}
 \def\mysubtitle{}
-\def\myemail{arnav@arnavsood.com}
+\def\myemail{arnavs@cmu.edu}
 \def\myweb{arnavsood.com}
 \def\mygit{arnavs}
 \def\myphone{(+1) 609 285 7001}
@@ -82,7 +83,7 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
  {\small  \href{https://github.com/\mygit}{\texttt{\mygit}} ~~\faGit} \\
  {\small  US citizen, Canada PR ~~\faPassport} \\ 
 }
-\lhead{ {\small  Compiled \today} \\ 
+\lhead{ {\small \today} \\ 
 \hspace{1 em} \\ 
 \hspace{1 em} \\ }
 % \setlength\headheight{50pt}
@@ -114,15 +115,16 @@ Path = /usr/local/texlive/2021/texmf-dist/fonts/opentype/public/fontawesome5/ }
 \vspace{0.4in}
 \noindent{\LARGE \textbf{ARNAV SOOD}}  
 \reversemarginpar
+% \pagestyle{empty}
 
 {\vskip 1em}
 \bigskip
 
 %% Overview
-\marginhead{\textsf{overview}}
+\marginhead{\textsf{interests}}
 \setlength{\parindent}{1cm}
 
-I am a first-year economics Ph.D. student at Carnegie Mellon University (Tepper School of Business.) My general interests are in computational macroeconomics, and especially high-dimensional models with heterogeneity in information. 
+Macroeconomics, Computational Economics, Computational Econometrics
 
 {\vskip 1em}
 \bigskip
@@ -133,10 +135,17 @@ I am a first-year economics Ph.D. student at Carnegie Mellon University (Tepper 
 
 Predoctoral Fellow, Univeristy of British Columbia, 2018--2020.
 \begin{itemize}
-  \setlength{\leftskip}{1cm} \item ${\color{darkred} \blacktriangleright}$ Supervised by \href{https://jesseperla.com}{Jesse Perla}. Member of \href{https://caida.ubc.ca/faculty-members-caida}{CAIDA}. 
+  \setlength{\leftskip}{1cm} \item Supervised by Jesse Perla. 
 \end{itemize} \vspace{0.1in} 
 
-Lead Developer, QuantEcon, 2019--. 
+Lead Developer, QuantEcon, 2019--2020.  \vspace{0.1in}
+
+Prior Experience, 2014--2018. 
+\begin{itemize}\setlength{\leftskip}{1cm}
+  \item Research Assistant to Laura Veldkamp
+  \item Economics Research Intern, Office of the Comptroller of the Currency
+  \item Intern, Morgan Stanley Bank, N.A.
+\end{itemize}
 
 {\vskip 1em}
 \bigskip
@@ -146,6 +155,8 @@ Lead Developer, QuantEcon, 2019--.
 \marginhead{education}
 
 \emph{(In-Progress) Ph.D. Economics, Carnegie Mellon University}. \vspace{0.1in}
+
+Economics Coursework, University of British Columbia, 2018--2020. \vspace{0.1in}
 
 B.A. Mathematics, New York University, 2018.
 
@@ -158,7 +169,6 @@ B.A. Mathematics, New York University, 2018.
 \textbf{\href{https://www.nber.org/papers/w28981}{Exploiting Symmetry in High-Dimensional Dynamic Programming}}. \hfill NBER
 \begin{itemize}
   \setlength{\leftskip}{1cm} \item  With Mahdi Ebrahimi Kahou, Jes\'{u}s Fern\'{a}ndez-Villaverde, Jesse Perla.
-  \item \emph{Presented}: Minnesota Macro Conference (Minneapolis MN, August 2--4, 2021); VSE Econometrics Lunch (Vancouver BC, April 16, 2021); VSE Lunch Seminar (Vancouver BC, December 1, 2020)
 \end{itemize} 
 
 {\vskip 1em}
@@ -169,7 +179,7 @@ B.A. Mathematics, New York University, 2018.
 
 \textbf{\href{https://github.com/QuantEcon/expectations.jl}{Expectations.jl}}  
 \begin{itemize}
-  \setlength{\leftskip}{1cm} \item  Efficient expectation operators for univariate distributions, using Gaussian quadrature. 
+  \setlength{\leftskip}{1cm} \item  Efficient expectation operators for distributions, using Gaussian quadrature. 
   \item \emph{Presented}: \href{https://live.juliacon.org/uploads/posters/N9CXCT.pdf}{JuliaCon 2020} (Virtual, July 29--31, 2020) 
 \end{itemize} \vspace{0.1in}
 
@@ -190,23 +200,30 @@ B.A. Mathematics, New York University, 2018.
   \setlength{\leftskip}{1cm} \item  With Jesse Perla. \href{https://quantecon.github.io/SimpleDifferentialOperators.jl/v0.4/generated/LCP_advanced.html}{Computational Appendix}.
 \end{itemize} \vspace{0.1in}
 
-
-\textbf{\href{https://dailysciencefiction.com/science-fiction/other-worlds-sf/arnav-sood/local-perturbation}{Local Perturbation}}.  \hfill Daily Science Fiction
-\begin{itemize}
-  \setlength{\leftskip}{1cm} \item  Applied comparative statics. 
-\end{itemize} \vspace{0.1in}
+% \textbf{\href{https://dailysciencefiction.com/science-fiction/other-worlds-sf/arnav-sood/local-perturbation}{Local Perturbation}}.  \hfill Daily Science Fiction
+% \begin{itemize}
+%   \setlength{\leftskip}{1cm} \item  Applied comparative statics. 
+% \end{itemize} \vspace{0.1in}
 
 
 \textbf{\href{https://dailysciencefiction.com/fantasy/fantasy/arnav-sood/customer-feedback-secondhand-alchemical-goods}{Customer Feedback (Secondhand Alchemical Goods)}}. \hfill Daily Science Fiction
 \begin{itemize}
   \setlength{\leftskip}{1cm} \item  Discussion of various transmutation schemes.  \href{https://microverses.net/archives/250}{Microverses Review}.
-\end{itemize} \vspace{0.1in}
+\end{itemize}
+\newpage
+\pagestyle{empty}
 
+{\vskip 1em}
+\bigskip
 
-\textbf{\href{http://blanketsea.com/2019/09/18/bounded-rationality-by-arnav-sood/}{Bounded Rationality}}. \hfill Blanket Sea
-\begin{itemize}
-  \setlength{\leftskip}{1cm} \item  Causes and effects of cognitive constraints. Pushcart Prize nominee.
-\end{itemize} \vspace{0.1in}
+\setlength{\leftskip}{0cm}
+\marginhead{awards}
+
+William Larimer Mellon Fellowship, CMU 2021 \vspace{0.1in}
+
+Presidential Honors Scholar, NYU 2014 \vspace{0.1 in}
+
+National Merit Scholar Finalist, 2014
 
 {\vskip 1em}
 \bigskip
@@ -219,9 +236,8 @@ Volunteer Tech Support, Free Geek Vancouver \vspace{0.1in}
 
 Volunteer Teacher, Splash! (Various Universities)
 \begin{itemize}
-  \setlength{\leftskip}{1cm}\item ${\color{darkred} \blacktriangleright}$ Taught free one-hour classes to high-school students. Subjects included information economics, statistics, abstract algebra, philosophy of mind, and Play-Doh. \vspace{0.1in}
+  \setlength{\leftskip}{1cm}\item Taught free one-hour classes to high-school students.  \vspace{0.1in}
 \end{itemize} 
-
 
 
 

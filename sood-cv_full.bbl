@@ -17,7 +17,7 @@
 \endgroup
 
 
-\refsection{0}
+\refsection{1}
   \datalist[entry]{nty/global//global/global}
     \entry{NBERw28981}{report}{}
       \name{author}{4}{}{%
@@ -72,7 +72,6 @@
       \verb{url}
       \verb http://www.nber.org/papers/w28981
       \endverb
-      \keyw{workingpaper}
       \annotation{item}{author}{default}{4}{}{0}{highlight}
     \endentry
   \enddatalist

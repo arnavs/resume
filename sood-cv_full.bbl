@@ -1,0 +1,81 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.1 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nty/global//global/global}
+    \entry{NBERw28981}{report}{}
+      \name{author}{4}{}{%
+        {{hash=87f852bb3b706aee47deeda968234881}{%
+           family={Ebrahimi\bibnamedelima Kahou},
+           familyi={E\bibinitperiod\bibinitdelim K\bibinitperiod},
+           given={Mahdi},
+           giveni={M\bibinitperiod}}}%
+        {{hash=baa80151b5ba7799780ab4e82914aa5c}{%
+           family={Fernández-Villaverde},
+           familyi={F\bibinithyphendelim V\bibinitperiod},
+           given={Jesús},
+           giveni={J\bibinitperiod}}}%
+        {{hash=6703205e9ff782de36dfbfd12d6df18f}{%
+           family={Perla},
+           familyi={P\bibinitperiod},
+           given={Jesse},
+           giveni={J\bibinitperiod}}}%
+        {{hash=167bbc00e4562acbc5dec84127a8463c}{%
+           family={Sood},
+           familyi={S\bibinitperiod},
+           given={Arnav},
+           giveni={A\bibinitperiod}}}%
+      }
+      \list{institution}{1}{%
+        {National Bureau of Economic Research}%
+      }
+      \strng{namehash}{2bcfab9433b964d80c52052949fb6f71}
+      \strng{fullhash}{36aad86986ef2d35f609bd74b6e75c04}
+      \strng{bibnamehash}{36aad86986ef2d35f609bd74b6e75c04}
+      \strng{authorbibnamehash}{36aad86986ef2d35f609bd74b6e75c04}
+      \strng{authornamehash}{2bcfab9433b964d80c52052949fb6f71}
+      \strng{authorfullhash}{36aad86986ef2d35f609bd74b6e75c04}
+      \field{sortinit}{E}
+      \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{abstract}{We propose a new method for solving high-dimensional dynamic programming problems and recursive competitive equilibria with a large (but finite) number of heterogeneous agents using deep learning. We avoid the curse of dimensionality thanks to three complementary techniques: (1) exploiting symmetry in the approximate law of motion and the value function; (2) constructing a concentration of measure to calculate high-dimensional expectations using a single Monte Carlo draw from the distribution of idiosyncratic shocks; and (3) designing and training deep learning architectures that exploit symmetry and concentration of measure. As an application, we find a global solution of a multi-firm version of the classic Lucas and Prescott (1971) model of investment under uncertainty. First, we compare the solution against a linear-quadratic Gaussian version for validation and benchmarking. Next, we solve the nonlinear version where no accurate or closed-form solution exists. Finally, we describe how our approach applies to a large class of models in economics.}
+      \field{month}{7}
+      \field{number}{28981}
+      \field{series}{Working Paper Series}
+      \field{title}{Exploiting Symmetry in High-Dimensional Dynamic Programming}
+      \field{type}{Working Paper}
+      \field{year}{2021}
+      \true{nocite}
+      \verb{doi}
+      \verb 10.3386/w28981
+      \endverb
+      \verb{urlraw}
+      \verb http://www.nber.org/papers/w28981
+      \endverb
+      \verb{url}
+      \verb http://www.nber.org/papers/w28981
+      \endverb
+      \keyw{workingpaper}
+      \annotation{item}{author}{default}{4}{}{0}{highlight}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

@@ -3,12 +3,17 @@
 \usepackage{amsmath, amsfonts, amssymb}
 \usepackage{xcolor, hyperref}
 \usepackage[backend=biber,maxbibnames=99,bibstyle=nature]{biblatex}
+\usepackage{setspace}
+
 \hypersetup{
     colorlinks,
     linkcolor={red!50!black},
     citecolor={blue!50!black},
     urlcolor={blue!80!black}
 }\usepackage{listings}
+\usepackage{float,tabularx}
+    \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+    \newcolumntype{Z}{>{\centering\arraybackslash}X}
 \usepackage{datetime}
 % \usepackage{times}
 % \usepackage{fontspec}
@@ -34,7 +39,7 @@
     {\textbf{#1}}
     {#1}}
 
-
+\setstretch{0.75}
 \begin{document}
 
 %% No bullets on labels
@@ -49,6 +54,7 @@
   \item Email: \href{mailto:arnavs@cmu.edu}{\texttt{arnavs@cmu.edu}}
   \item GitHub: \href{https://github.com/arnavs}{\texttt{arnavs}}
   \item Citizenship: US Citizen, Canada PR
+  \item Phone: 609.285.7001
 \end{itemize}
 
 \subsubsection*{Interests}
@@ -60,6 +66,7 @@
 \begin{itemize}
   \item \textit{(In-Progress) Ph.D. Economics, Carnegie Mellon University} 
   \item B.A. Mathematics, New York University \hfill 2018
+  \item Dual-Enrolled Student, Princeton University \hfill 2013
 \end{itemize} 
 
 \subsubsection*{Employment}
@@ -80,7 +87,7 @@
 \nocite{NBERw28981}
 \hspace*{1.2cm}%
 \begin{minipage}{0.9\textwidth}%
-  \vspace{0.05in} \printbibliography[heading=none, sorting=ynt]
+  \printbibliography[heading=none, sorting=ynt]
 \end{minipage}%
 \end{refsection}
 
@@ -119,9 +126,15 @@
 % \end{itemize}
 
 \subsubsection*{Teaching}
-\begin{itemize}
-  \item Guest Lecturer, University of British Columbia 
-\end{itemize}
+\begin{tabularx}{\textwidth}{X Z Y} 
+  Guest Lecturer (UBC) & Economics Courses & 2019
+\end{tabularx}
+
+% \begin{itemize}
+
+
+%   \item Guest Lecturer, University of British Columbia 
+% \end{itemize}
 
 \subsubsection*{Other Activities}
 \begin{itemize}

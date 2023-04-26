@@ -76,5 +76,30 @@
     \endentry
   \enddatalist
 \endrefsection
+
+\refsection{2}
+  \datalist[entry]{nty/global//global/global}
+    \entry{FP}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=cd06b59143e486678d89f96e890f0a30}{%
+           family={{Sood, Arnav and Best, James}},
+           familyi={S\bibinitperiod}}}%
+      }
+      \strng{namehash}{cd06b59143e486678d89f96e890f0a30}
+      \strng{fullhash}{cd06b59143e486678d89f96e890f0a30}
+      \strng{bibnamehash}{cd06b59143e486678d89f96e890f0a30}
+      \strng{authorbibnamehash}{cd06b59143e486678d89f96e890f0a30}
+      \strng{authornamehash}{cd06b59143e486678d89f96e890f0a30}
+      \strng{authorfullhash}{cd06b59143e486678d89f96e890f0a30}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Frequentist Persuasion}
+      \true{nocite}
+      \annotation{item}{author}{default}{4}{}{0}{highlight}
+    \endentry
+  \enddatalist
+\endrefsection
 \endinput
 

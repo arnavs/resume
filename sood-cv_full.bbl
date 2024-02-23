@@ -79,6 +79,27 @@
 
 \refsection{2}
   \datalist[entry]{nty/global//global/global}
+    \entry{talking}{misc}{}
+      \name{author}{1}{}{%
+        {{hash=167bbc00e4562acbc5dec84127a8463c}{%
+           family={Sood},
+           familyi={S\bibinitperiod},
+           given={Arnav},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{167bbc00e4562acbc5dec84127a8463c}
+      \strng{fullhash}{167bbc00e4562acbc5dec84127a8463c}
+      \strng{bibnamehash}{167bbc00e4562acbc5dec84127a8463c}
+      \strng{authorbibnamehash}{167bbc00e4562acbc5dec84127a8463c}
+      \strng{authornamehash}{167bbc00e4562acbc5dec84127a8463c}
+      \strng{authorfullhash}{167bbc00e4562acbc5dec84127a8463c}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Costly Listening}
+      \true{nocite}
+    \endentry
     \entry{FP}{misc}{}
       \name{author}{2}{}{%
         {{hash=167bbc00e4562acbc5dec84127a8463c}{%
@@ -103,33 +124,6 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Frequentist Persuasion}
-      \true{nocite}
-      \annotation{item}{author}{default}{1}{}{0}{highlight}
-    \endentry
-    \entry{talking}{misc}{}
-      \name{author}{2}{}{%
-        {{hash=167bbc00e4562acbc5dec84127a8463c}{%
-           family={Sood},
-           familyi={S\bibinitperiod},
-           given={Arnav},
-           giveni={A\bibinitperiod}}}%
-        {{hash=e307ab74b5a71ec6dab0999579ab13c5}{%
-           family={Sun},
-           familyi={S\bibinitperiod},
-           given={Mengxi},
-           giveni={M\bibinitperiod}}}%
-      }
-      \strng{namehash}{b7f2ac5ae13e171eaad9a25e04e6d37f}
-      \strng{fullhash}{b7f2ac5ae13e171eaad9a25e04e6d37f}
-      \strng{bibnamehash}{b7f2ac5ae13e171eaad9a25e04e6d37f}
-      \strng{authorbibnamehash}{b7f2ac5ae13e171eaad9a25e04e6d37f}
-      \strng{authornamehash}{b7f2ac5ae13e171eaad9a25e04e6d37f}
-      \strng{authorfullhash}{b7f2ac5ae13e171eaad9a25e04e6d37f}
-      \field{sortinit}{S}
-      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Costly Listening}
       \true{nocite}
       \annotation{item}{author}{default}{1}{}{0}{highlight}
     \endentry

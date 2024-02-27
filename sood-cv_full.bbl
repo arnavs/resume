@@ -79,7 +79,7 @@
 
 \refsection{2}
   \datalist[entry]{nty/global//global/global}
-    \entry{talking}{misc}{}
+    \entry{facts}{misc}{}
       \name{author}{1}{}{%
         {{hash=167bbc00e4562acbc5dec84127a8463c}{%
            family={Sood},
@@ -97,7 +97,7 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
-      \field{title}{Costly Listening}
+      \field{title}{Alternative Facts}
       \true{nocite}
     \endentry
     \entry{FP}{misc}{}

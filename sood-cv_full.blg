@@ -1,0 +1,27 @@
+[0] Config.pm:307> INFO - This is Biber 2.19
+[0] Config.pm:310> INFO - Logfile is 'sood-cv_full.blg'
+[37] biber-darwin:340> INFO - === Wed May  8, 2024, 08:12:50
+[44] Biber.pm:419> INFO - Reading 'sood-cv_full.bcf'
+[90] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[90] Biber.pm:979> INFO - Found 1 citekeys in bib section 1
+[90] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[90] Biber.pm:979> INFO - Found 1 citekeys in bib section 2
+[90] Biber.pm:979> INFO - Found 0 citekeys in bib section 0
+[103] Biber.pm:4419> INFO - Processing section 1
+[108] Biber.pm:4610> INFO - Looking for bibtex file 'papers.bib' for section 1
+[109] bibtex.pm:1713> INFO - LaTeX decoding ...
+[110] bibtex.pm:1519> INFO - Found BibTeX data source 'papers.bib'
+[130] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[131] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[131] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[131] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[134] Biber.pm:4419> INFO - Processing section 2
+[134] Biber.pm:4610> INFO - Looking for bibtex file 'papers.bib' for section 2
+[141] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[142] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[142] Biber.pm:4239> INFO - Sorting list 'nty/global//global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[142] Biber.pm:4245> INFO - No sort tailoring available for locale 'en-US'
+[142] bbl.pm:660> INFO - Writing 'sood-cv_full.bbl' with encoding 'UTF-8'
+[143] bbl.pm:763> INFO - Output to sood-cv_full.bbl
+[144] Biber.pm:131> WARN - legacy month field 'July' in entry 'NBERw28981' is not an integer - this will probably not sort properly.
+[144] Biber.pm:133> INFO - WARNINGS: 1

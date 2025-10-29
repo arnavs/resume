@@ -1,28 +1,28 @@
 [0] Config.pm:308> INFO - This is Biber 2.20
 [0] Config.pm:311> INFO - Logfile is 'sood-cv_full.blg'
-[24] biber-darwin:340> INFO - === Tue Sep 30, 2025, 15:32:39
-[29] Biber.pm:420> INFO - Reading 'sood-cv_full.bcf'
-[56] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
-[56] Biber.pm:994> INFO - Found 1 citekeys in bib section 1
-[56] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
-[56] Biber.pm:994> INFO - Found 2 citekeys in bib section 2
-[56] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
-[65] Biber.pm:4463> INFO - Processing section 1
-[68] Biber.pm:4654> INFO - Looking for bibtex file 'papers.bib' for section 1
-[69] bibtex.pm:1713> INFO - LaTeX decoding ...
-[70] bibtex.pm:1519> INFO - Found BibTeX data source 'papers.bib'
-[83] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[83] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[83] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[83] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[85] Biber.pm:4463> INFO - Processing section 2
-[86] Biber.pm:4654> INFO - Looking for bibtex file 'papers.bib' for section 2
-[91] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
-[91] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
-[91] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
-[91] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
-[92] bbl.pm:676> INFO - Writing 'sood-cv_full.bbl' with encoding 'UTF-8'
-[92] bbl.pm:779> INFO - Output to sood-cv_full.bbl
-[92] Biber.pm:131> WARN - legacy month field 'July' in entry 'NBERw28981' is not an integer - this will probably not sort properly.
-[92] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/2_/0p7t1zs91sb9fdzw_xhz1tth0000gn/T/biber_tmp_FPyJ/4cba211c7098ce6d56874590d4a06a86_23306.utf8, line 27, warning: 1 characters of junk seen at toplevel
-[92] Biber.pm:133> INFO - WARNINGS: 2
+[25] biber-darwin:340> INFO - === Tue Oct 28, 2025, 14:52:12
+[30] Biber.pm:420> INFO - Reading 'sood-cv_full.bcf'
+[57] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[57] Biber.pm:994> INFO - Found 2 citekeys in bib section 1
+[57] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[57] Biber.pm:994> INFO - Found 1 citekeys in bib section 2
+[57] Biber.pm:994> INFO - Found 0 citekeys in bib section 0
+[66] Biber.pm:4463> INFO - Processing section 1
+[69] Biber.pm:4654> INFO - Looking for bibtex file 'papers.bib' for section 1
+[70] bibtex.pm:1713> INFO - LaTeX decoding ...
+[71] bibtex.pm:1519> INFO - Found BibTeX data source 'papers.bib'
+[87] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[87] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[87] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[87] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[89] Biber.pm:4463> INFO - Processing section 2
+[89] Biber.pm:4654> INFO - Looking for bibtex file 'papers.bib' for section 2
+[93] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[93] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[93] Biber.pm:4283> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[93] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-US'
+[93] bbl.pm:676> INFO - Writing 'sood-cv_full.bbl' with encoding 'UTF-8'
+[94] bbl.pm:779> INFO - Output to sood-cv_full.bbl
+[94] Biber.pm:131> WARN - legacy month field 'July' in entry 'NBERw28981' is not an integer - this will probably not sort properly.
+[94] Biber.pm:131> WARN - BibTeX subsystem: /var/folders/2_/0p7t1zs91sb9fdzw_xhz1tth0000gn/T/biber_tmp_EZVL/4cba211c7098ce6d56874590d4a06a86_33390.utf8, line 28, warning: 1 characters of junk seen at toplevel
+[94] Biber.pm:133> INFO - WARNINGS: 2

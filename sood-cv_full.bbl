@@ -101,8 +101,20 @@
       \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
+      \field{eprintclass}{econ.TH}
+      \field{eprinttype}{arXiv}
       \field{title}{Frequentist Persuasion}
+      \field{year}{2025}
       \true{nocite}
+      \verb{eprint}
+      \verb 2510.25066
+      \endverb
+      \verb{urlraw}
+      \verb https://arxiv.org/abs/2510.25066
+      \endverb
+      \verb{url}
+      \verb https://arxiv.org/abs/2510.25066
+      \endverb
       \annotation{item}{author}{default}{1}{}{0}{highlight}
     \endentry
   \enddatalist

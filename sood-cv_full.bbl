@@ -20,7 +20,7 @@
 \refsection{1}
   \datalist[entry]{nty/global//global/global/global}
     \entry{NBERw28981}{report}{}{}
-      \name{author}{4}{}{%
+      \name{author}{5}{}{%
         {{hash=87f852bb3b706aee47deeda968234881}{%
            family={Ebrahimi\bibnamedelima Kahou},
            familyi={E\bibinitperiod\bibinitdelim K\bibinitperiod},
@@ -41,18 +41,23 @@
            familyi={S\bibinitperiod},
            given={Arnav},
            giveni={A\bibinitperiod}}}%
+        {{hash=eb511d53690be0830b61ab2396210c2e}{%
+           family={Bloem-Reddy},
+           familyi={B\bibinithyphendelim R\bibinitperiod},
+           given={Benjamin},
+           giveni={B\bibinitperiod}}}%
       }
       \list{institution}{1}{%
         {National Bureau of Economic Research}%
       }
       \strng{namehash}{2bcfab9433b964d80c52052949fb6f71}
-      \strng{fullhash}{36aad86986ef2d35f609bd74b6e75c04}
-      \strng{fullhashraw}{36aad86986ef2d35f609bd74b6e75c04}
-      \strng{bibnamehash}{36aad86986ef2d35f609bd74b6e75c04}
-      \strng{authorbibnamehash}{36aad86986ef2d35f609bd74b6e75c04}
+      \strng{fullhash}{0f7e4b1726270e9767121d21632cee74}
+      \strng{fullhashraw}{0f7e4b1726270e9767121d21632cee74}
+      \strng{bibnamehash}{0f7e4b1726270e9767121d21632cee74}
+      \strng{authorbibnamehash}{0f7e4b1726270e9767121d21632cee74}
       \strng{authornamehash}{2bcfab9433b964d80c52052949fb6f71}
-      \strng{authorfullhash}{36aad86986ef2d35f609bd74b6e75c04}
-      \strng{authorfullhashraw}{36aad86986ef2d35f609bd74b6e75c04}
+      \strng{authorfullhash}{0f7e4b1726270e9767121d21632cee74}
+      \strng{authorfullhashraw}{0f7e4b1726270e9767121d21632cee74}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{labelnamesource}{author}

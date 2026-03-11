@@ -1,0 +1,182 @@
+\documentclass[12pt]{article}   % based on locally stored memoir-article-styles.sty
+\usepackage{url}
+\usepackage{amsmath, amsfonts, amssymb}
+\usepackage{xcolor, hyperref}
+\usepackage[backend=biber,maxbibnames=99,bibstyle=nature]{biblatex}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{newpxtext}
+
+\hypersetup{
+    colorlinks,
+    linkcolor={red!50!black},
+    citecolor={blue!50!black},
+    urlcolor={blue!80!black}
+}\usepackage{listings}
+\usepackage{float,tabularx}
+    \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
+    \newcolumntype{Z}{>{\centering\arraybackslash}X}
+\usepackage{datetime}
+\DeclareFieldFormat{labelnumberwidth}{}
+\setlength{\biblabelsep}{0pt}
+% \usepackage{newtxtext,newtxmath}
+
+\newdateformat{monthyeardate}{%
+  \monthname[\THEMONTH] \THEYEAR}
+\usepackage[top=0.5in, bottom=1in, left=1cm, right=3cm]{geometry}
+\usepackage{enumitem}
+\setitemize{itemsep=1pt}
+\addbibresource{papers.bib} %Imports bibliography file
+\renewcommand*{\mkbibnamegiven}[1]{%
+  \ifitemannotation{highlight}
+    {\textbf{#1}}
+    {#1}}
+
+\renewcommand*{\mkbibnamefamily}[1]{%
+  \ifitemannotation{highlight}
+    {\textbf{#1}}
+    {#1}}
+
+\setstretch{0.75}
+\begin{document}
+
+%% No bullets on labels
+\renewcommand{\labelitemi}{~}
+
+\flushleft {\huge \textbf{Arnav Sood}} \hfill \monthyeardate\today \\
+\flushleft Ph.D. Student in Economics, Carnegie Mellon University
+
+\subsubsection*{Personal}
+\begin{itemize}
+  % \item Office: Tepper Quad 4218B, 4765 Forbes Ave., Pittsburgh 15213
+  \item Email: \href{mailto:arnavs@alumni.cmu.edu}{\texttt{arnavs@alumni.cmu.edu}} \hfill Website: \href{https://arnavsood.com}{\tt arnavsood.com}
+  \item GitHub: \href{https://github.com/arnavs}{\texttt{arnavs}} \hfill Citizenship: US Citizen, Canada PR
+\end{itemize}
+
+\subsubsection*{Interests}
+\begin{itemize}
+  \item Statistical Learning, Computational Methods, Information, Game Theory, Behavioral 
+\end{itemize} 
+
+\subsubsection*{Computational Skills}
+\begin{itemize}
+  \item Julia, Python/Torch, Shell Scripting, Docker, Open-Source Development
+\end{itemize} 
+
+\subsubsection*{Mathematical Skills}
+\begin{itemize}
+  \item {Empirical Processes, Bayesian Inference, Stochastic Calculus, Causal Inference, Combinatorics, Optimization}
+\end{itemize} 
+
+\subsubsection*{Employment}
+\begin{itemize}
+  \item PhD Research Intern, Abridge \hfill 2026
+  % \item Lead Developer, QuantEcon \hfill 2019--2020
+  % \subitem {\small Cowrote open-source Julia packages}
+  % \subitem {\small Managed cloud deployment and lecture upgrades}
+  % \item Predoc, University of British Columbia \hfill 2018--2020
+  %   \subitem {\small Member of \href{https://caida.ubc.ca/caida-ubc-icics-centre-artificial-intelligence-decision-making-and-action}{Centre for Artificial Intelligence Design and Action}}
+  %   \subitem {\small Worked on Julia solutions to systems of stochastic DiffEqs}
+  %   \subitem {\small Coauthored Torch paper on fast neural methods for high-dimensional DP}
+  \item \underline{Prior (pre-grad school) Experience} \hfill 2014--2021
+    \subitem {\small Lead Developer, QuantEcon }
+    \subsubitem {\footnotesize Cowrote open-source Julia packages and managed cloud deployment}
+    \subitem {\small Predoc, Vancouver School of Economics at UBC}
+    \subsubitem {\footnotesize Solved stochastic DAE systems in Julia and coauthored Torch paper on fast neural DP}
+    \subitem {\small Research Assistant to Laura Veldkamp}
+    \subitem {\small Research Intern, Office of the Comptroller of the Currency}
+    \subitem {\small Intern, Morgan Stanley} 
+    \subitem {\small Treespace Math/Bio REU (NSF Grant \#14-61094)}
+\end{itemize}
+
+\subsubsection*{Education}
+\begin{itemize}
+  \item \textit{(In-Progress) Ph.D. Economics, Carnegie Mellon University} \hfill \emph{2021-2027}
+  % \subitem Visiting PhD Student, New York University \hfill 2026
+  \subitem Committee: \underline{Ali Shourideh}, James A. Best, Maryam Saeedi, Aislinn Bohren (Penn)
+  \item M.S. Economics, Carnegie Mellon University \hfill 2021-2023
+  \item B.A. Mathematics, New York University \hfill 2014-2018
+  % \item \hspace{3 em} \textit{Minors: Economics, Philosophy}
+  \item Dual-Enrolled Math Student, Princeton University \hfill 2013
+\end{itemize} 
+
+\subsubsection*{Selected Grants and Awards}
+\begin{itemize}
+  \item Best Student Paper, AETW 2026 \hfill 2026 
+  \subitem \$500 NZD for \textit{Frequentist Persuasion}
+  \item PNC Research Support Fund, PNC Center for Financial Services Innovation \hfill 2025 
+  \subitem \$2500 for \emph{Frequentist Persuasion}
+  \item William Larimer Mellon Fellowship, Carnegie Mellon \hfill 2021-2026
+  \item Presidential Honors Scholar, New York University \hfill 2014-2018
+  \item National Merit Scholarship Finalist \hfill 2014
+\end{itemize}
+
+\subsubsection*{Software}
+\begin{itemize}
+  \item \href{https://github.com/QuantEcon/Expectations.jl}{\texttt{Expectations.jl}}: Quadrature operators for distributions.
+  \item \href{https://github.com/QuantEcon/InstantiateFromURL.jl}{\texttt{InstantiateFromURL.jl}}: Bind Jupyter notebooks to web-hosted dependency TOML.
+\end{itemize}
+
+\subsubsection*{Working Papers}
+\begin{refsection} % refsection environment
+\nocite{NBERw28981}
+\nocite{FP} 
+\hspace*{1.2cm}%
+\begin{minipage}{0.9\textwidth}%
+  \printbibliography[heading=none, sorting=ynt]
+\end{minipage}%
+\end{refsection}
+
+\subsubsection*{Works in Progress}
+\begin{refsection} % refsection environment
+\nocite{SL}
+\hspace*{1.2cm}%
+\begin{minipage}{0.9\textwidth}%
+  \printbibliography[heading=none, sorting=ynt]
+\end{minipage}%
+\end{refsection}
+
+\subsubsection*{Talks, Panels and Seminars}
+
+% (``ES'' stands for Econometric Society)
+
+\begin{itemize}
+  \item 2026: Australasian Economic Theory Workshop (\textsc{u. auckland}), Econometric Society Africa Meeting (\textsc{hybrid}), Canadian Economics Association Annual Meeting (\textsc{simon fraser}),% Econometric Society Interdisciplinary Frontiers Economics and AI+ML Meeting (\textsc{cornell})
+  \item 2024: SAET (\textsc{u. chile}), Theory Brown Bag (\textsc{u. pittsburgh}), Summer School in Economic Theory (poster, \textsc{northwestern --- kellogg})
+  \item 2023: Pennsylvania Economic Theory Conference (poster, \textsc{penn state})
+  \item 2022: ASSA ``What Can AI Do in Economics?'' (\textsc{virtual})
+  \item 2020: JuliaCon (poster and talk, \textsc{virtual})
+\end{itemize}
+
+\subsubsection*{Invited Activities}
+\begin{itemize}
+  \item Summer Schools and Workshops: 2025 Asian School in Economic Theory (\textsc{nyu abu dhabi}), 2023 DSE Deep Learning (\textsc{u. lausanne}), DSE Empirical Market Design (\textsc{mit}) 
+\end{itemize}
+
+\subsubsection*{Teaching}
+
+\hspace*{0.7cm}
+\begin{tabularx}{\textwidth}{{XlXcXr}}
+    FractalU & Computational and Behavioral Economics & \hfill 2026 \\ 
+    CMU (TA) & Economics of Information  & \hfill 2026 \\ 
+    CMU & Principles of Micro & \hfill 2024 \\ 
+    CMU (TA) & MBA Statistics, Econ, Optimization Classes & \hfill 2023-2024 \\ 
+    CMU (TA) & PhD Metrics, Computation, Macro Courses & \hfill 2022-2024
+\end{tabularx}  
+
+\subsubsection*{Other Activities}
+\begin{itemize}
+  \item Volunter Official, US National Science Bowl 
+  \item Volunteer Tech Support, Free Geek Vancouver 
+  \item Volunteer Teacher, Splash! (Various Universities)
+\end{itemize}
+\end{document}
+
+% \subsubsection*{Other Writing}
+% \begin{itemize}
+%   \item \href{https://notes.quantecon.org/submission/5c832d2be7b4c5000f4c8e48}{Optimal Stopping and Linear Complementarity}. (With Jesse Perla.) QuantEcon Notes.
+%   \begin{itemize}
+%     \item \href{https://quantecon.github.io/SimpleDifferentialOperators.jl/v0.4/generated/LCP_advanced.html}{Computational Appendix}.
+%   \end{itemize}
+%   \item \href{https://dailysciencefiction.com/fantasy/fantasy/arnav-sood/customer-feedback-secondhand-alchemical-goods}{Customer Feedback (Secondhand Alchemical Goods)}. Daily Science Fiction.
+% \end{itemize}

@@ -17,8 +17,8 @@
     \newcolumntype{Y}{>{\raggedleft\arraybackslash}X}
     \newcolumntype{Z}{>{\centering\arraybackslash}X}
 \usepackage{datetime}
-\DeclareFieldFormat{labelnumberwidth}{}
-\setlength{\biblabelsep}{0pt}
+\DeclareFieldFormat{labelnumberwidth}{\mkbibbrackets{#1}}
+\setlength{\biblabelsep}{0.5em}
 % \usepackage{newtxtext,newtxmath}
 
 \newdateformat{monthyeardate}{%
@@ -39,6 +39,9 @@
 
 \setstretch{0.75}
 \begin{document}
+\nocite{NBERw28981}
+\nocite{FP}
+\nocite{WDW}
 
 %% No bullets on labels
 \renewcommand{\labelitemi}{~}
@@ -82,7 +85,7 @@
 \subsubsection*{Employment}
 \begin{itemize}
   \item \textbf{PhD Data Scientist}, \href{https://reveliolabs.com}{Revelio Labs} \hfill 2026-
-        \subitem {\small Using internal company data to identify and model how time-use distributions (jobs) change}
+        \subitem {\small Jobs are distributions over tasks. In \cite{WDW} we model their dynamics using internal company data.}
   \item \textbf{PhD Data Scientist (Summer Intern)}, \href{https://reveliolabs.com}{Revelio Labs} \hfill 2026
         \subitem {\small Designed, built, estimated, and distilled a flow-based seniority model over 16M+ transitions}
   \item \underline{Prior Experience (Pre-CMU)} \hfill \underline{2014--2020}
@@ -125,23 +128,16 @@
 \end{itemize}
 
 \subsubsection*{Working Papers}
-\begin{refsection} % refsection environment
-  \nocite{NBERw28981}
-  \nocite{FP}
-  \hspace*{1.2cm}%
-  \begin{minipage}{0.9\textwidth}%
-    \printbibliography[heading=none, sorting=ynt]
-  \end{minipage}%
-\end{refsection}
+\hspace*{1.2cm}%
+\begin{minipage}{0.9\textwidth}%
+  \printbibliography[heading=none, sorting=ynt, keyword=workingpaper]
+\end{minipage}%
 
 \subsubsection*{Works in Progress}
-\begin{refsection} % refsection environment
-  \nocite{SL}
-  \hspace*{1.2cm}%
-  \begin{minipage}{0.9\textwidth}%
-    \printbibliography[heading=none, sorting=ynt]
-  \end{minipage}%
-\end{refsection}
+\hspace*{1.2cm}%
+\begin{minipage}{0.9\textwidth}%
+  \printbibliography[heading=none, sorting=ynt, keyword=workinprogress]
+\end{minipage}%
 
 \subsubsection*{Talks, Panels and Seminars}
 
@@ -178,6 +174,7 @@
   \item Volunteer Tech Support, Free Geek Vancouver
   \item Volunteer Teacher, Splash! (Various Universities)
 \end{itemize}
+
 \end{document}
 
 % \subsubsection*{Other Writing}

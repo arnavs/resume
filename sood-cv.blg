@@ -1,0 +1,18 @@
+[0] Config.pm:329> INFO - This is Biber 2.22
+[0] Config.pm:332> INFO - Logfile is 'sood-cv.blg'
+[20] biber-darwin:342> INFO - === Wed Nov 18, 2026, 08:34:36
+[24] Biber.pm:421> INFO - Reading 'sood-cv.bcf'
+[48] Biber.pm:1002> INFO - Found 3 citekeys in bib section 0
+[52] Biber.pm:4487> INFO - Processing section 0
+[55] Biber.pm:4680> INFO - Looking for bibtex file 'papers.bib' for section 0
+[55] bibtex.pm:1713> INFO - LaTeX decoding ...
+[57] bibtex.pm:1519> INFO - Found BibTeX data source 'papers.bib'
+[74] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'variable = shifted' with 'variable = non-ignorable'
+[74] UCollate.pm:68> INFO - Overriding locale 'en-US' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[74] Biber.pm:4307> INFO - Sorting list 'nty/global//global/global/global' of type 'entry' with template 'nty' and locale 'en-US'
+[74] Biber.pm:4313> INFO - No sort tailoring available for locale 'en-US'
+[76] bbl.pm:676> INFO - Writing 'sood-cv.bbl' with encoding 'UTF-8'
+[77] bbl.pm:779> INFO - Output to sood-cv.bbl
+[77] Biber.pm:132> WARN - legacy month field 'July' in entry 'NBERw28981' is not an integer - this will probably not sort properly.
+[77] Biber.pm:132> WARN - BibTeX subsystem: /var/folders/7g/mhllr3_j6ms8hql8w5y2djpw0000gn/T/biber_tmp_BTvu/4cba211c7098ce6d56874590d4a06a86_25686.utf8, line 23, warning: 1 characters of junk seen at toplevel
+[77] Biber.pm:134> INFO - WARNINGS: 2

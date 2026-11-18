@@ -19,38 +19,6 @@
 
 \refsection{0}
   \datalist[entry]{nty/global//global/global/global}
-    \entry{SL}{misc}{}{}
-      \name{author}{2}{}{%
-        {{hash=0a02aae647e47f5f468056efa467f823}{%
-           family={Zweig},
-           familyi={Z\bibinitperiod},
-           given={Ben},
-           giveni={B\bibinitperiod}}}%
-        {{hash=167bbc00e4562acbc5dec84127a8463c}{%
-           family={Sood},
-           familyi={S\bibinitperiod},
-           given={Arnav},
-           giveni={A\bibinitperiod}}}%
-      }
-      \strng{namehash}{f5b6ab75098d1c6bd5521ab681afd2fb}
-      \strng{fullhash}{f5b6ab75098d1c6bd5521ab681afd2fb}
-      \strng{fullhashraw}{f5b6ab75098d1c6bd5521ab681afd2fb}
-      \strng{bibnamehash}{f5b6ab75098d1c6bd5521ab681afd2fb}
-      \strng{authorbibnamehash}{f5b6ab75098d1c6bd5521ab681afd2fb}
-      \strng{authornamehash}{f5b6ab75098d1c6bd5521ab681afd2fb}
-      \strng{authorfullhash}{f5b6ab75098d1c6bd5521ab681afd2fb}
-      \strng{authorfullhashraw}{f5b6ab75098d1c6bd5521ab681afd2fb}
-      \field{sortinit}{Z}
-      \field{sortinithash}{96892c0b0a36bb8557c40c49813d48b3}
-      \field{labelnamesource}{author}
-      \field{labeltitlesource}{title}
-      \field{title}{Who Does What}
-    \endentry
-  \enddatalist
-\endrefsection
-
-\refsection{1}
-  \datalist[entry]{nty/global//global/global/global}
     \entry{NBERw28981}{report}{}{}
       \name{author}{5}{}{%
         {{hash=87f852bb3b706aee47deeda968234881}{%
@@ -111,6 +79,7 @@
       \verb{url}
       \verb http://www.nber.org/papers/w28981
       \endverb
+      \keyw{workingpaper}
       \annotation{item}{author}{default}{4}{}{0}{highlight}
     \endentry
     \entry{FP}{misc}{}{}
@@ -143,14 +112,10 @@
       \field{title}{Frequentist Persuasion}
       \field{year}{2025}
       \true{nocite}
+      \keyw{workingpaper}
       \annotation{item}{author}{default}{1}{}{0}{highlight}
     \endentry
-  \enddatalist
-\endrefsection
-
-\refsection{2}
-  \datalist[entry]{nty/global//global/global/global}
-    \entry{SL}{misc}{}{}
+    \entry{WDW}{misc}{}{}
       \name{author}{2}{}{%
         {{hash=0a02aae647e47f5f468056efa467f823}{%
            family={Zweig},
@@ -176,6 +141,8 @@
       \field{labelnamesource}{author}
       \field{labeltitlesource}{title}
       \field{title}{Who Does What}
+      \keyw{workinprogress}
+      \annotation{item}{author}{default}{2}{}{0}{highlight}
     \endentry
   \enddatalist
 \endrefsection
